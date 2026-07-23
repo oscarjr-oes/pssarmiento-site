@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portal | PS Group of Companies</title>
+<meta name="description" content="Internal Company OS dashboard sign-in for PS Group team members.">
+<meta property="og:title" content="Portal | PS Group of Companies">
+<meta property="og:description" content="Internal Company OS dashboard sign-in for PS Group team members.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logos/ps-group.png">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#122611;font-family:"Figtree",system-ui,sans-serif;color:#fff}
+  a{color:#EBCF9E;text-decoration:none}
+</style>
+</helmet>
+
+<div style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;text-align:center">
+  <img src="assets/logos/ps-group.png" style="width:56px;height:56px;object-fit:contain;margin-bottom:28px" alt="">
+  <div style="font:600 11px ui-monospace,Menlo,monospace;letter-spacing:.16em;color:#EBCF9E;text-transform:uppercase;margin-bottom:18px">Internal use only</div>
+  <h1 style="font:400 34px/1.2 Newsreader;margin:0 0 14px">PS Group Portal</h1>
+  <p style="font:400 15px/1.6 Figtree;color:rgba(255,255,255,.7);max-width:420px;margin:0 0 36px">Sign in with your PS Group account to access the Company OS dashboard.</p>
+  <div style="display:flex;gap:14px;margin-bottom:28px">
+    <span style="background:#EBCF9E;color:#122611;font:700 14px Figtree;padding:12px 26px;border-radius:8px;cursor:default">Sign in — Team</span>
+    <span style="border:1px solid rgba(235,207,158,.5);color:#EBCF9E;font:700 14px Figtree;padding:12px 26px;border-radius:8px;cursor:default">Sign in — Executive</span>
+  </div>
+  <a href="index.html" style="font:500 13px Figtree;color:rgba(255,255,255,.55)">← Back to site</a>
+</div>
+</x-dc>
+</body>
+</html>
