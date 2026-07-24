@@ -354,7 +354,7 @@
   <!-- ============ 360 VIDEO POPUP ============ -->
   <div data-video-modal style="position: fixed; inset: 0; z-index: 100; display: none; align-items: center; justify-content: center; background: rgba(9,8,7,0.94); padding: 40px;">
     <button data-video-close style="position: absolute; top: 24px; right: 28px; background: none; border: none; color: #fff; font-size: 34px; cursor: pointer; line-height: 1;">×</button>
-    <video data-video-el src="assets/video/banwag-360.mp4" controls playsinline style="max-width: 90vw; max-height: 85vh; border-radius: 10px; box-shadow: 0 20px 80px rgba(0,0,0,0.6); background: #000;"></video>
+    <video data-video-el src="assets/video/banwag-360.mp4" controls playsinline preload="metadata" muted style="max-width: 90vw; max-height: 85vh; border-radius: 10px; box-shadow: 0 20px 80px rgba(0,0,0,0.6); background: #000;"></video>
   </div>
 
   <!-- ============ PHOTO SELECTS GALLERY ============ -->
@@ -450,7 +450,15 @@ class Component extends DCLogic {
     // 360 video popup player
     const videoModal = q('[data-video-modal]');
     const videoEl = q('[data-video-el]');
-    const openVideo = () => { if (!videoModal) return; videoModal.style.display = 'flex'; document.body.style.overflow = 'hidden'; if (videoEl) videoEl.play().catch(() => {}); };
+    const openVideo = () => {
+      if (!videoModal) return;
+      videoModal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      if (videoEl) {
+        videoEl.currentTime = 0;
+        videoEl.play().then(() => { videoEl.muted = false; }).catch(() => {});
+      }
+    };
     const closeVideo = () => { if (!videoModal) return; videoModal.style.display = 'none'; document.body.style.overflow = ''; if (videoEl) videoEl.pause(); };
     const btnVideo = q('[data-video-open]');
     if (btnVideo) btnVideo.addEventListener('click', openVideo);
