@@ -319,13 +319,12 @@
       <div>
         <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #EBCF9E;">For media &amp; partners</div>
         <h2 style="font-size: clamp(1.7rem, 2.8vw, 2.3rem); font-weight: 700; margin: 12px 0 0; line-height: 1.12;">Download the press kit.</h2>
-        <p style="font-size: 1.02rem; line-height: 1.58; color: rgba(250,250,247,0.75); margin: 14px 0 0; max-width: 440px;">Fact sheet, press release, key messages, and a folder of print-ready photography — everything in one download.</p>
+        <p style="font-size: 1.02rem; line-height: 1.58; color: rgba(250,250,247,0.75); margin: 14px 0 0; max-width: 440px;">Fact sheet, press release, and a folder of print-ready photography — everything in one download.</p>
         <div style="display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap;">
-          <a data-download href="#" style="display: inline-flex; align-items: center; gap: 8px; background: #EBCF9E; color: #131210; font-weight: 700; font-size: 15px; padding: 12px 22px; border-radius: 999px;">↓ Press kit (ZIP)</a>
-          <a data-download href="#" style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(235,207,158,0.4); color: #FAFAF7; font-weight: 600; font-size: 15px; padding: 12px 22px; border-radius: 999px;">↓ Fact sheet (PDF)</a>
-          <a data-download href="#" style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(235,207,158,0.4); color: #FAFAF7; font-weight: 600; font-size: 15px; padding: 12px 22px; border-radius: 999px;">↓ Photo selects</a>
+          <a href="assets/press/Banwag_Press_Kit.zip" download style="display: inline-flex; align-items: center; gap: 8px; background: #EBCF9E; color: #131210; font-weight: 700; font-size: 15px; padding: 12px 22px; border-radius: 999px;">↓ Press kit (ZIP)</a>
+          <a href="assets/press/Banwag_Fact_Sheet.pdf" download style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(235,207,158,0.4); color: #FAFAF7; font-weight: 600; font-size: 15px; padding: 12px 22px; border-radius: 999px;">↓ Fact sheet (PDF)</a>
+          <button data-photo-selects style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(235,207,158,0.4); color: #FAFAF7; font-weight: 600; font-size: 15px; padding: 12px 22px; border-radius: 999px; background: none; cursor: pointer; font-family: inherit;">⤢ Photo selects</button>
         </div>
-        <div style="font-size: 12px; color: rgba(250,250,247,0.45); margin-top: 14px;">Downloads to be wired to the hosted assets on launch.</div>
       </div>
       <div style="border-left: 1px solid rgba(235,207,158,0.2); padding-left: 56px;">
         <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #EBCF9E;">Book the space · Partnerships</div>
@@ -347,6 +346,17 @@
   <div data-lb style="position: fixed; inset: 0; z-index: 100; display: none; align-items: center; justify-content: center; background: rgba(9,8,7,0.94); padding: 40px; cursor: zoom-out;">
     <img data-lb-img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" style="max-width: 96%; max-height: 92%; object-fit: contain; border-radius: 8px; box-shadow: 0 20px 80px rgba(0,0,0,0.6);">
     <button data-lb-close style="position: absolute; top: 24px; right: 28px; background: none; border: none; color: #fff; font-size: 34px; cursor: pointer; line-height: 1;">×</button>
+  </div>
+
+  <!-- ============ PHOTO SELECTS GALLERY ============ -->
+  <div data-gallery style="position: fixed; inset: 0; z-index: 100; display: none; align-items: center; justify-content: center; background: rgba(9,8,7,0.94); padding: 40px;">
+    <button data-gallery-close style="position: absolute; top: 24px; right: 28px; background: none; border: none; color: #fff; font-size: 34px; cursor: pointer; line-height: 1;">×</button>
+    <button data-gallery-prev aria-label="Previous photo" style="position: absolute; left: 24px; top: 50%; transform: translateY(-50%); background: rgba(250,250,247,0.08); border: 1px solid rgba(250,250,247,0.25); color: #fff; font-size: 22px; width: 46px; height: 46px; border-radius: 50%; cursor: pointer;">‹</button>
+    <button data-gallery-next aria-label="Next photo" style="position: absolute; right: 24px; top: 50%; transform: translateY(-50%); background: rgba(250,250,247,0.08); border: 1px solid rgba(250,250,247,0.25); color: #fff; font-size: 22px; width: 46px; height: 46px; border-radius: 50%; cursor: pointer;">›</button>
+    <div style="text-align: center;">
+      <img data-gallery-img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" style="max-width: 88vw; max-height: 78vh; object-fit: contain; border-radius: 8px; box-shadow: 0 20px 80px rgba(0,0,0,0.6);">
+      <div data-gallery-count style="margin-top: 16px; font-size: 13px; color: rgba(250,250,247,0.6); letter-spacing: 0.04em;"></div>
+    </div>
   </div>
 
 </div>
@@ -428,10 +438,37 @@ class Component extends DCLogic {
       });
     }
 
-    // press-kit download stubs
-    qa('[data-download]').forEach(a => {
-      a.addEventListener('click', (e) => { e.preventDefault(); });
-    });
+    // photo selects — mini gallery cycling Banwag_1..7.jpg
+    const photos = Array.from({ length: 7 }, (_, i) => `assets/photos/Banwag_${i + 1}.jpg`);
+    let photoIdx = 0;
+    const gal = q('[data-gallery]');
+    const galImg = q('[data-gallery-img]');
+    const galCount = q('[data-gallery-count]');
+    const showPhoto = (i) => {
+      photoIdx = (i + photos.length) % photos.length;
+      galImg.src = photos[photoIdx];
+      galImg.alt = `Banwag photo select ${photoIdx + 1}`;
+      galCount.textContent = `${photoIdx + 1} / ${photos.length}`;
+    };
+    const openGal = () => { if (!gal) return; showPhoto(0); gal.style.display = 'flex'; document.body.style.overflow = 'hidden'; };
+    const closeGal = () => { if (!gal) return; gal.style.display = 'none'; document.body.style.overflow = ''; };
+    const btnGal = q('[data-photo-selects]');
+    if (btnGal) btnGal.addEventListener('click', openGal);
+    const galClose = q('[data-gallery-close]');
+    if (galClose) galClose.addEventListener('click', closeGal);
+    const galPrev = q('[data-gallery-prev]');
+    if (galPrev) galPrev.addEventListener('click', () => showPhoto(photoIdx - 1));
+    const galNext = q('[data-gallery-next]');
+    if (galNext) galNext.addEventListener('click', () => showPhoto(photoIdx + 1));
+    if (gal) {
+      gal.addEventListener('click', (e) => { if (e.target === gal) closeGal(); });
+      window.addEventListener('keydown', (e) => {
+        if (!gal || gal.style.display !== 'flex') return;
+        if (e.key === 'Escape') closeGal();
+        if (e.key === 'ArrowLeft') showPhoto(photoIdx - 1);
+        if (e.key === 'ArrowRight') showPhoto(photoIdx + 1);
+      });
+    }
   }
   renderVals() { return {}; }
 }
