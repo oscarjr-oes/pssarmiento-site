@@ -24,7 +24,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
 <style>
   body{margin:0;background:#F3EAD6;font-family:"Figtree",system-ui,sans-serif;color:#2a2418}
   a{color:#0B6B28;text-decoration:none}
@@ -61,7 +61,8 @@
     <a href="our-story.html" style="display:inline-block;text-decoration:none;background:#0B6B28;color:#fff;font:600 15px Figtree;padding:14px 30px;border-radius:8px">Read our story →</a>
   </div>
 
-  <div style="padding:44px 40px 0"><img src="assets/photos/papang-and-nanay.webp" alt="Papang and Nanay" style="display:block;width:100%;height:300px;object-fit:cover;object-position:top;border-radius:16px;border:1px solid rgba(139,99,48,.22)"></div>
+  <!-- FIX: taller frame + repositioned focus so both faces are in view (was height:300, object-position:top) -->
+  <div style="padding:44px 40px 0"><img src="assets/photos/papang-and-nanay.webp" alt="Papang and Nanay" style="display:block;width:100%;height:460px;object-fit:cover;object-position:50% 12%;border-radius:16px;border:1px solid rgba(139,99,48,.22)"></div>
 
   <!-- timeline teaser -->
   <div style="padding:56px 40px 60px">
@@ -92,10 +93,12 @@
   <!-- banwag band -->
   <div style="margin:0 40px 60px;border-radius:18px;overflow:hidden;display:grid;grid-template-columns:1.1fr 1fr;background:#122611">
     <div style="padding:52px 44px;color:#fff;display:flex;flex-direction:column;justify-content:center">
-      <div style="display: inline-flex; align-self: flex-start; align-items: center; gap: 8px; background: rgba(235,207,158,.14); border: 1px solid rgba(235,207,158,.4); color: #EBCF9E; font: 600 11px ui-monospace,Menlo,monospace; letter-spacing: .06em; padding: 7px 13px; border-radius: 20px; text-transform: uppercase; margin-bottom: 20px; width: 133px; height: 23px">★ Good Design Award PH 2026</div>
-      <h2 style="font:400 40px/1.05 Newsreader;margin:0 0 14px;color:#fff">Banwag</h2><p style="font:400 16px/1.6 Figtree;color:rgba(255,255,255,.8);max-width:400px;margin:0 0 26px">A beacon for BARMM — built with and for the communities of the Bangsamoro<a href="banwag.html" style="display: inline-block; background: rgb(235, 207, 158); color: rgb(18, 38, 17); font: 700 15px Figtree; padding: 14px 26px; border-radius: 8px; text-decoration:none; width: 109px; height: 13px">Visit Banwag →</a></p>
-      
-      
+      <!-- FIX: removed fixed width/height so text doesn't wrap awkwardly -->
+      <div style="display:inline-flex;align-self:flex-start;align-items:center;gap:8px;background:rgba(235,207,158,.14);border:1px solid rgba(235,207,158,.4);color:#EBCF9E;font:600 11px ui-monospace,Menlo,monospace;letter-spacing:.06em;padding:7px 13px;border-radius:20px;text-transform:uppercase;margin-bottom:20px;white-space:nowrap">★ Good Design Award PH 2026</div>
+      <h2 style="font:400 40px/1.05 Newsreader;margin:0 0 14px;color:#fff">Banwag</h2>
+      <p style="font:400 16px/1.6 Figtree;color:rgba(255,255,255,.8);max-width:400px;margin:0 0 26px">A beacon for BARMM — built with and for the communities of the Bangsamoro</p>
+      <!-- FIX: button moved out of the paragraph, own row, no fixed width/height (was inline-block inside <p>, 109x13px, causing overlap) -->
+      <a href="banwag.html" style="display:inline-block;align-self:flex-start;background:#EBCF9E;color:#122611;font:700 15px Figtree;padding:14px 26px;border-radius:8px;text-decoration:none">Visit Banwag →</a>
     </div>
     <a href="banwag.html" style="display:block;height:100%"><img src="assets/photos/Banwag_2.jpg" alt="Banwag pavilion at golden hour" style="width:100%;height:100%;object-fit:cover;display:block"></a>
   </div>
