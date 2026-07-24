@@ -263,15 +263,18 @@
     <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
 
       <!-- 360 -->
-      <div data-reveal style="border: 1px solid rgba(235,207,158,0.22); border-radius: 18px; overflow: hidden; position: relative; min-height: 340px; display: flex;">
+      <button data-video-open style="border: 1px solid rgba(235,207,158,0.4); border-radius: 18px; overflow: hidden; position: relative; min-height: 340px; display: flex; padding: 0; cursor: pointer; background: none; font-family: inherit; text-align: left; width: 100%;" data-reveal>
         <img src="assets/photos/interior-lattice.jpg" alt="Looking up at the bamboo lattice from inside" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.55;">
         <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(19,18,16,0.15) 0%, rgba(19,18,16,0.9) 100%);"></div>
+        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+          <span style="width: 68px; height: 68px; border-radius: 50%; background: rgba(250,250,247,0.12); border: 1.5px solid rgba(250,250,247,0.5); display: flex; align-items: center; justify-content: center; font-size: 22px; color: #FAFAF7;">▶</span>
+        </div>
         <div style="position: relative; z-index: 2; margin-top: auto; padding: 32px;">
           <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #EBCF9E;">360° — Step inside</div>
-          <div style="font-size: 26px; font-weight: 700; margin-top: 10px; line-height: 1.15;">Stand under the lattice from anywhere.</div>
-          <div style="display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(250,250,247,0.6); border: 1px solid rgba(250,250,247,0.25); padding: 6px 12px; border-radius: 999px;">Immersive viewer · coming soon</div>
+          <div style="font-size: 26px; font-weight: 700; margin-top: 10px; line-height: 1.15; color: #FAFAF7;">Stand under the lattice from anywhere.</div>
+          <div style="display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(250,250,247,0.85); border: 1px solid rgba(250,250,247,0.35); padding: 6px 12px; border-radius: 999px;">▶ Play the walkthrough</div>
         </div>
-      </div>
+      </button>
 
       <!-- Builder portal — live, links to the parametric mini-game -->
       <a href="banwag-builder.html" data-reveal data-game-slot style="border: 1px solid rgba(235,207,158,0.4); border-radius: 18px; overflow: hidden; position: relative; min-height: 340px; display: flex; background: #171512;">
@@ -346,6 +349,12 @@
   <div data-lb style="position: fixed; inset: 0; z-index: 100; display: none; align-items: center; justify-content: center; background: rgba(9,8,7,0.94); padding: 40px; cursor: zoom-out;">
     <img data-lb-img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" style="max-width: 96%; max-height: 92%; object-fit: contain; border-radius: 8px; box-shadow: 0 20px 80px rgba(0,0,0,0.6);">
     <button data-lb-close style="position: absolute; top: 24px; right: 28px; background: none; border: none; color: #fff; font-size: 34px; cursor: pointer; line-height: 1;">×</button>
+  </div>
+
+  <!-- ============ 360 VIDEO POPUP ============ -->
+  <div data-video-modal style="position: fixed; inset: 0; z-index: 100; display: none; align-items: center; justify-content: center; background: rgba(9,8,7,0.94); padding: 40px;">
+    <button data-video-close style="position: absolute; top: 24px; right: 28px; background: none; border: none; color: #fff; font-size: 34px; cursor: pointer; line-height: 1;">×</button>
+    <video data-video-el src="assets/video/banwag-360.mp4" controls playsinline style="max-width: 90vw; max-height: 85vh; border-radius: 10px; box-shadow: 0 20px 80px rgba(0,0,0,0.6); background: #000;"></video>
   </div>
 
   <!-- ============ PHOTO SELECTS GALLERY ============ -->
@@ -436,6 +445,20 @@ class Component extends DCLogic {
         link.style.fontSize = '16px';
         btn.replaceWith(link);
       });
+    }
+
+    // 360 video popup player
+    const videoModal = q('[data-video-modal]');
+    const videoEl = q('[data-video-el]');
+    const openVideo = () => { if (!videoModal) return; videoModal.style.display = 'flex'; document.body.style.overflow = 'hidden'; if (videoEl) videoEl.play().catch(() => {}); };
+    const closeVideo = () => { if (!videoModal) return; videoModal.style.display = 'none'; document.body.style.overflow = ''; if (videoEl) videoEl.pause(); };
+    const btnVideo = q('[data-video-open]');
+    if (btnVideo) btnVideo.addEventListener('click', openVideo);
+    const videoClose = q('[data-video-close]');
+    if (videoClose) videoClose.addEventListener('click', closeVideo);
+    if (videoModal) {
+      videoModal.addEventListener('click', (e) => { if (e.target === videoModal) closeVideo(); });
+      window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && videoModal.style.display === 'flex') closeVideo(); });
     }
 
     // photo selects — mini gallery cycling Banwag_1..7.jpg
