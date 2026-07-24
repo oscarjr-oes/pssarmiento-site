@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Banwag | PS Group of Companies</title>
+<meta name="description" content="A beacon for BARMM — explore the award-winning Banwag pavilion in 3D, or build your own with the Parametric Studio.">
+<meta property="og:title" content="Banwag | PS Group of Companies">
+<meta property="og:description" content="A beacon for BARMM — explore the award-winning Banwag pavilion in 3D, or build your own with the Parametric Studio.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/photos/Banwag_2.jpg">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ECYJ5Z8FSW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ECYJ5Z8FSW');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<script type="importmap">
+{ "imports": {
+  "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+} }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
+<style>
+  html,body{margin:0;padding:0;height:100%;background:#131210;overflow:hidden;font-family:Figtree,system-ui,sans-serif;color:#E8DFC8;-webkit-font-smoothing:antialiased;}
+  *{box-sizing:border-box;}
+  a{color:#8FB98A;text-decoration:none;} a:hover{color:#B7D6B2;}
+  input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:4px;border-radius:2px;background:#3a3833;outline:none;}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#3E6B35;border:2px solid #E8DFC8;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.5);}
+  input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:#3E6B35;border:2px solid #E8DFC8;cursor:pointer;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+  @keyframes toastIn{from{opacity:0;transform:translate(-50%,10px);}to{opacity:1;transform:translate(-50%,0);}}
+</style>
+</helmet>
+<div style="position:fixed;inset:0;overflow:hidden;background:radial-gradient(120% 120% at 50% 0%,#26241f 0%,#131210 70%);">
+
+  <div ref="{{ mountRef }}" style="position: absolute; inset: 0; left: 6px; top: 57px"></div>
+
+  <!-- Top bar -->
+  <header style="position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:16px 20px;pointer-events:none;z-index:41;">
+    <div style="display:flex;align-items:center;gap:12px;pointer-events:auto;">
+      <sc-if value="{{ showBack }}" hint-placeholder-val="{{ false }}">
+        <button onClick="{{ backToSelect }}" style="display:flex;align-items:center;gap:6px;font:700 13px Figtree;color:#E8DFC8;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:8px 15px 8px 12px;cursor:pointer;">← Back</button>
+      </sc-if>
+      <div style="display:flex;align-items:baseline;gap:10px;">
+        <span style="font-weight:800;font-size:19px;letter-spacing:-.02em;">Build Your Own Banwag</span>
+        <span style="font-family:'Space Mono',monospace;font-size:11px;color:#8a8d8f;">{{ modeLabel }}</span>
+      </div>
+      <a href="banwag.html" style="display:flex;align-items:center;gap:8px;font:700 13px Figtree;color:#E8DFC8;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:6px 15px 6px 6px;text-decoration:none;margin-left:6px;"><span style="width:24px;height:24px;border-radius:50%;background:#F3EAD6;display:flex;align-items:center;justify-content:center;flex:none;"><img src="assets/logos/ps-group.png" alt="" style="width:18px;height:18px;object-fit:contain"></span>← Banwag</a>
+    </div>
+    <div style="display:flex;gap:8px;pointer-events:auto;">
+      <sc-if value="{{ showCladdingToggle }}" hint-placeholder-val="{{ false }}">
+        <button onClick="{{ toggleCladding }}" style="{{ claddingBtnStyle }}">{{ claddingLabel }}</button>
+      </sc-if>
+      <button onClick="{{ toggleGround }}" style="font:600 13px Figtree;color:#E8DFC8;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:8px 16px;cursor:pointer;">{{ groundLabel }}</button>
+      <button onClick="{{ toggleNight }}" style="font:600 13px Figtree;color:#E8DFC8;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:8px 16px;cursor:pointer;">{{ nightLabel }}</button>
+      <button onClick="{{ toggleHelp }}" style="font:700 15px Figtree;color:#E8DFC8;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:999px;width:36px;height:36px;cursor:pointer;">?</button>
+    </div>
+  </header>
+
+  <!-- Mode selection -->
+  <sc-if value="{{ showSelect }}" hint-placeholder-val="{{ true }}">
+    <div style="position:absolute;inset:0;z-index:40;display:flex;align-items:center;justify-content:center;background:rgba(19,18,16,.72);backdrop-filter:blur(10px);animation:fadeIn .4s ease;">
+      <div style="max-width:820px;width:100%;padding:32px;text-align:center;">
+        <h1 style="font-size:clamp(30px,5vw,48px);font-weight:800;letter-spacing:-.03em;margin:0 0 12px;">Banwag</h1>
+        <p style="color:#b9b3a2;font-size:16px;margin:0 0 32px;">View the real pavilion in 3D — or explore the parametric system it was built from.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;">
+          <button onClick="{{ pickViewer }}" style="text-align:left;cursor:pointer;background:linear-gradient(160deg,#2f4a2a,#223d1e);border:1px solid #3E6B35;border-radius:16px;padding:22px;color:#E8DFC8;">
+            <div style="font-size:11px;font-family:'Space Mono',monospace;color:#B7D6B2;margin-bottom:8px;">★ THE REAL BANWAG</div>
+            <h3 style="margin:0 0 6px;font-size:20px;font-weight:700;">3D Viewer</h3>
+            <p style="margin:0;font-size:13px;color:#c9d6c4;line-height:1.5;">Orbit the built pavilion, captured from the construction model. View only.</p>
+          </button>
+          <button onClick="{{ pickStudio }}" style="text-align:left;cursor:pointer;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:22px;color:#E8DFC8;">
+            <h3 style="margin:0 0 6px;font-size:20px;font-weight:700;">Parametric Studio</h3>
+            <p style="margin:0;font-size:13px;color:#b9b3a2;line-height:1.5;">Drive the sliders. The dome flexes live. Export your variant.</p>
+          </button>
+          <button onClick="{{ pickFreestyle }}" style="text-align:left;cursor:pointer;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:22px;color:#E8DFC8;">
+            <h3 style="margin:0 0 6px;font-size:20px;font-weight:700;">Freestyle</h3>
+            <p style="margin:0;font-size:13px;color:#b9b3a2;line-height:1.5;">Open ground, same kit of parts. Build anything.</p>
+          </button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- Help card -->
+  <sc-if value="{{ showHelp }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ toggleHelp }}" style="position:absolute;inset:0;z-index:50;background:rgba(19,18,16,.6);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:24px;animation:fadeIn .3s ease;">
+      <div style="max-width:440px;background:#1c1b17;border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:26px;">
+        <h3 style="margin:0 0 10px;font-size:18px;font-weight:700;">How this works</h3>
+        <p style="margin:0 0 14px;font-size:14px;line-height:1.6;color:#c9c3b2;">The real Banwag was shaped in Rhino + Grasshopper — a script computed every rib and node before any bamboo was cut. These sliders drive the same kind of script: an axisymmetric onion-dome profile revolved into a 16-sided rib cage, with the cladding built as a separate skin you can toggle or set panel by panel.</p>
+        <p style="margin:0;font-size:12px;color:#8a8d8f;">Drag to orbit · scroll to zoom · tap a mode from the studio header.</p>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- Studio panel -->
+  <sc-if value="{{ showStudio }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute;z-index:20;top:64px;right:16px;width:308px;max-width:calc(100vw - 32px);max-height:calc(100vh - 150px);overflow-y:auto;background:rgba(24,23,19,.92);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:18px;animation:fadeIn .35s ease;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+        <span style="font-weight:700;font-size:15px;">Parameters</span>
+        <button onClick="{{ backToSelect }}" style="font:600 12px Figtree;color:#8a8d8f;background:none;border:none;cursor:pointer;">modes ↗</button>
+      </div>
+      <p style="margin:0 0 14px;font-size:12px;color:#8a8d8f;">Every change regenerates the dome.</p>
+
+      <sc-for list="{{ sliders }}" as="s" hint-placeholder-count="13">
+        <div style="margin-bottom:15px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+            <label style="font-size:13px;font-weight:600;color:#d8d2c1;">{{ s.label }}</label>
+            <span style="font-family:'Space Mono',monospace;font-size:12px;color:#8FB98A;">{{ s.display }}</span>
+          </div>
+          <input type="range" min="{{ s.min }}" max="{{ s.max }}" step="{{ s.step }}" value="{{ s.value }}" onInput="{{ s.onInput }}">
+        </div>
+      </sc-for>
+
+      <div style="display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 4px;">
+        <button onClick="{{ presetTower }}" style="font:600 12px Figtree;color:#E8DFC8;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:7px 14px;cursor:pointer;">Tower</button>
+        <button onClick="{{ presetPavilion }}" style="font:600 12px Figtree;color:#E8DFC8;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:7px 14px;cursor:pointer;">Pavilion</button>
+        <button onClick="{{ presetRandom }}" style="font:600 12px Figtree;color:#E8DFC8;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:7px 14px;cursor:pointer;">Random 🎲</button>
+      </div>
+      <p style="margin:14px 0 0;font-size:11px;line-height:1.5;color:#8a8d8f;border-top:1px solid rgba(255,255,255,.1);padding-top:12px;"><b style="color:#8FB98A;">Tap a panel</b> to cycle its cladding: open → marine fabric → weatherproof mesh. The <b>Fabric</b> slider sets the base fill; the <b>Cladding</b> button hides it all.</p>
+    </div>
+  </sc-if>
+
+  <!-- Readout strip -->
+  <sc-if value="{{ showReadout }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute;z-index:20;left:16px;bottom:52px;max-width:calc(100vw - 32px);background:rgba(24,23,19,.9);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:12px 16px;animation:fadeIn .35s ease;">
+      <div style="display:flex;gap:18px;flex-wrap:wrap;font-family:'Space Mono',monospace;font-size:12px;">
+        <span><b style="color:#C9A46A;font-size:15px;">{{ poleCount }}</b> poles</span>
+        <span><b style="color:#C9A46A;font-size:15px;">{{ nodeCount }}</b> nodes</span>
+        <span><b style="color:#C9A46A;font-size:15px;">{{ bambooM }}</b> m bamboo</span>
+        <span><b style="color:#C9A46A;font-size:15px;">{{ fabricM2 }}</b> m² fabric</span>
+      </div>
+      <div style="margin-top:8px;font-size:12px;color:#8FB98A;">≈ {{ co2 }} kg CO₂ stored in bamboo <span style="color:#8a8d8f;">(est.)</span></div>
+      <sc-if value="{{ isBanwag }}" hint-placeholder-val="{{ false }}">
+        <div style="margin-top:8px;font-family:'Space Mono',monospace;font-size:11px;background:#3E6B35;color:#E8DFC8;border-radius:8px;padding:5px 9px;display:inline-block;">★ THIS IS BANWAG — {{ anchorCount }}-sided drum</div>
+      </sc-if>
+    </div>
+  </sc-if>
+
+  <!-- Freestyle HUD -->
+  <sc-if value="{{ showFree }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute;z-index:20;left:50%;bottom:60px;transform:translateX(-50%);display:flex;gap:8px;background:rgba(24,23,19,.9);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:8px;animation:fadeIn .35s ease;">
+      <sc-for list="{{ tools }}" as="t" hint-placeholder-count="4">
+        <button onClick="{{ t.onClick }}" style="{{ t.style }}">{{ t.label }}</button>
+      </sc-for>
+      <div style="display:flex;flex-direction:column;justify-content:center;gap:2px;min-width:118px;padding:0 6px;">
+        <div style="display:flex;justify-content:space-between;font-size:10px;color:#8a8d8f;font-family:'Space Mono',monospace;"><span>height</span><span style="color:#8FB98A;">{{ freeHeightLabel }}</span></div>
+        <input type="range" min="0" max="6" step="0.25" value="{{ freeHeight }}" onInput="{{ setFreeHeight }}">
+      </div>
+      <div style="width:1px;background:rgba(255,255,255,.14);margin:2px 4px;"></div>
+      <button onClick="{{ freeClear }}" style="font:600 13px Figtree;color:#E8DFC8;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:8px 14px;cursor:pointer;">Clear</button>
+    </div>
+    <div style="position:absolute;z-index:20;left:50%;bottom:118px;transform:translateX(-50%);font-family:'Space Mono',monospace;font-size:11px;color:#8a8d8f;background:rgba(24,23,19,.75);border-radius:8px;padding:5px 12px;white-space:nowrap;">{{ freeHint }}</div>
+  </sc-if>
+
+  <!-- Export menu -->
+  <sc-if value="{{ showExport }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute;z-index:20;right:16px;bottom:52px;display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+      <div style="display:flex;gap:8px;">
+        <button onClick="{{ doScreenshot }}" style="font:600 13px Figtree;color:#E8DFC8;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:9px 15px;cursor:pointer;">Screenshot</button>
+        <button onClick="{{ doShare }}" style="font:600 13px Figtree;color:#E8DFC8;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:9px 15px;cursor:pointer;">Share</button>
+      </div>
+      <div style="display:flex;gap:8px;">
+        <button onClick="{{ doGLB }}" style="font:600 13px Figtree;color:#E8DFC8;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:9px 15px;cursor:pointer;">.glb</button>
+        <button onClick="{{ doOBJ }}" style="font:600 13px Figtree;color:#E8DFC8;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:9px 15px;cursor:pointer;">.obj</button>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- Viewer HUD (real Banwag, view-only) -->
+  <sc-if value="{{ showViewer }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute;z-index:20;left:16px;bottom:52px;max-width:calc(100vw - 32px);background:rgba(24,23,19,.9);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:12px 16px;animation:fadeIn .35s ease;">
+      <div style="font-weight:700;font-size:14px;margin-bottom:2px;">The Real Banwag</div>
+      <div style="font-family:'Space Mono',monospace;font-size:11px;color:#8FB98A;">{{ viewerStatus }}</div>
+      <div style="margin-top:6px;font-size:11px;color:#8a8d8f;">Drag to orbit · scroll to zoom · view-only, no model download.</div>
+    </div>
+    <div style="position:absolute;z-index:20;right:16px;bottom:52px;">
+      <button onClick="{{ doScreenshot }}" style="font:600 13px Figtree;color:#E8DFC8;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:9px 15px;cursor:pointer;">Screenshot</button>
+    </div>
+  </sc-if>
+
+  <!-- Loading veil -->
+  <sc-if value="{{ showLoading }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute;inset:0;z-index:45;display:flex;align-items:center;justify-content:center;background:rgba(19,18,16,.78);backdrop-filter:blur(8px);animation:fadeIn .25s ease;">
+      <div style="text-align:center;">
+        <div style="font-weight:700;font-size:18px;margin-bottom:8px;">Loading the real Banwag…</div>
+        <div style="font-family:'Space Mono',monospace;font-size:13px;color:#8FB98A;">{{ loadingPct }}</div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- Toast -->
+  <sc-if value="{{ toast }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute;z-index:60;left:50%;top:70px;transform:translateX(-50%);background:#3E6B35;color:#E8DFC8;font:600 13px Figtree;padding:10px 18px;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.5);animation:toastIn .25s ease;">{{ toast }}</div>
+  </sc-if>
+
+  <!-- Footer credit -->
+  <footer style="position:absolute;z-index:15;left:0;right:0;bottom:0;text-align:center;font-size:10px;color:#6f6d66;padding:8px 16px;pointer-events:none;line-height:1.4;">
+    Banwag was designed &amp; built by Studio Impossible Projects with the Sarmiento family. Build by Numbers™ system by SIP.
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;100%&quot;}}">
+// Banwag ground truth: a single-surface triangulated geodesic DIAGRID dome —
+// NOT a tiered stupa (the three fabric tiers in the .ply scan are the marine-fabric
+// canopy, not the frame). Profile measured from the architectural cross-section
+// (Sheet 4): structural Ø 11,335 mm (radius 5.67 m), apex +8,930 mm, eave ring
+// +6,180 mm, spring +1,630 mm. [tNorm 0..1 over height, R metres]. Widest low on
+// the dome, curving continuously in to a pointed spire; slight taper to the feet.
+const BANWAG_PROFILE = [
+  [0.00, 4.50],[0.12, 5.10],[0.25, 5.50],[0.38, 5.65],[0.50, 5.67],
+  [0.62, 5.48],[0.70, 5.15],[0.78, 4.25],[0.85, 3.05],[0.90, 2.00],
+  [0.95, 1.00],[1.00, 0.12],
+];
+const BANWAG_RREF = 5.67, BANWAG_ZAPEX = 8.93;
+function banwagR(t){ // t 0..1 -> radius in metres along the onion profile
+  const P=BANWAG_PROFILE; t=Math.max(0,Math.min(1,t));
+  for(let i=0;i<P.length-1;i++){ if(t<=P[i+1][0]){ const a=P[i],b=P[i+1];
+    const f=(t-a[0])/((b[0]-a[0])||1); return a[1]+(b[1]-a[1])*f; } }
+  return P[P.length-1][1];
+}
+
+// Real-Banwag mesh (reduced, view-only). Upload banwag-web.ply to Wix Media
+// (or any host) and paste its URL here. Relative path works for local testing.
+const BANWAG_MESH_URL = './banwag-web.ply';
+
+// diagonals:2 (cross/X-brace) — the frame is a diagrid: two diagonal families +
+// horizontal hoops triangulate every bay (confirmed on Sheet 4 and the .ply base drum).
+// radius 5.67 m / height 8.93 m match the architectural cross-section (Ø 11,335, apex +8,930).
+const BANWAG = { radius:5.67, height:8.93, sectors:16, layers:8, pointiness:0.5, twist:0, oculus:0, entrances:0, skin:90, hoops:1, hoopEvery:1, diagonals:2, baseLean:1.25 };
+
+const SLIDER_DEFS = [
+  { id:'radius', label:'Footprint', min:3, max:12, step:0.1, unit:'m', fmt:v=>(v*2).toFixed(1)+' m ⌀' },
+  { id:'height', label:'Rise', min:2, max:14, step:0.1, unit:'m', fmt:v=>v.toFixed(1)+' m' },
+  { id:'sectors', label:'Sides', min:8, max:26, step:2, fmt:v=>Math.round(v)+'-sided' },
+  { id:'layers', label:'Rib rings', min:3, max:12, step:1, fmt:v=>Math.round(v) },
+  { id:'pointiness', label:'Belly ↔ point', min:0, max:1, step:0.01, fmt:v=>v<0.33?'onion':v>0.66?'spire':'stupa' },
+  { id:'twist', label:'Twist', min:0, max:0.7, step:0.01, fmt:v=>v.toFixed(2) },
+  { id:'oculus', label:'Apex opening', min:0, max:0.25, step:0.01, fmt:v=>Math.round(v*100)+'%' },
+  { id:'entrances', label:'Entrances', min:0, max:8, step:1, fmt:v=>Math.round(v) },
+  { id:'hoops', label:'Horizontal poles', min:0, max:1, step:1, fmt:v=>v>=0.5?'on':'off' },
+  { id:'hoopEvery', label:'Hoop spacing', min:1, max:4, step:1, fmt:v=>'every '+Math.round(v)+(Math.round(v)>1?' rings':' ring') },
+  { id:'diagonals', label:'Diagonal braces', min:0, max:2, step:1, fmt:v=>['none','single','cross'][Math.round(v)] },
+  { id:'baseLean', label:'Base lean', min:-2, max:3, step:0.05, unit:'m', fmt:v=>Math.abs(v)<0.1?'straight':(v<0?'inward '+v.toFixed(2)+' m':'outward +'+v.toFixed(2)+' m') },
+  { id:'skin', label:'Cladding', min:0, max:100, step:1, fmt:v=>Math.round(v)+'%' },
+];
+
+const COL = { ivory:0xE8DFC8, bamboo:0xC9A46A, steel:0x8A8D8F, green:0x3E6B35 };
+const BAMBOO_KG_PER_M = 1.2;
+
+class Component extends DCLogic {
+  state = { mode:'select', params:{...BANWAG}, night:false, showHelp:false, toast:'', showGround:true,
+            freeTool:'pole', freeHeight:2.5, raiseLayer:0, gen:null, cladding:true,
+            loadingReal:false, loadPct:0, realErr:'' };
+
+  // ---------- Banwag onion-dome engine (axisymmetric revolve + rib cage) ----------
+  generate(p){
+    const S = Math.max(4, Math.round(p.sectors));
+    const L = Math.max(2, Math.round(p.layers));
+    const R = p.radius, H = p.height, oc = p.oculus * R;
+    const rScale = R / BANWAG_RREF;
+    const E = Math.round(p.entrances);
+    const idx = (l,k)=> l*S + (((k%S)+S)%S);
+    const entr = new Set();
+    if(E>0){ for(let e=0;e<E;e++){ const c=Math.round(e*S/E)%S; entr.add(((c%S)+S)%S); } }
+    // radius profile at band fraction t, with pointiness sharpening toward a cone
+    const profR = (t)=>{
+      let r = banwagR(t) * rScale;                 // onion silhouette
+      const cone = BANWAG_RREF * rScale * (1-t);   // straight taper
+      const sharp = Math.max(0,(p.pointiness-0.5))*2;
+      const full  = Math.max(0,(0.5-p.pointiness))*2;
+      r = r + (cone - r)*sharp;
+      r = r * (1 + full*0.18*Math.sin(t*Math.PI)); // belly out when "onion"
+      return Math.max(oc*(1-t)+r*0, r);            // keep >=0
+    };
+    // the dome springs off the ground on splayed feet: the base ring sits at springH,
+    // the apex at H (matches Sheet 4: spring +1630 mm, apex +8930 mm ≈ 0.18·H).
+    const springH = Math.min(1.48, H*0.18);
+    const nodes = [];
+    for(let l=0;l<=L;l++){
+      const t=l/L;
+      const r = Math.max(oc, profR(t));
+      const y = springH + (H-springH)*t;
+      for(let k=0;k<S;k++){
+        const th = 2*Math.PI*k/S + l*p.twist*(2*Math.PI/S);
+        const isEntr = (l===0 && entr.has(k));
+        // the entrance centre node is a void: not rendered, nothing attaches to it
+        nodes.push({ id:idx(l,k), l, k, pos:[r*Math.cos(th), y, r*Math.sin(th)], entrance:isEntr, hidden:isEntr });
+      }
+    }
+    const poles=[]; let bamboo=0;
+    const dist=(a,b)=>{const A=nodes[a].pos,B=nodes[b].pos;return Math.hypot(A[0]-B[0],A[1]-B[1],A[2]-B[2]);};
+    // splayed feet: A-frame bamboo legs from each base-ring node down-and-out to a
+    // footing ring wider than the dome (Sheet 4: footings at Ø12000 vs Ø11335 spring).
+    const baseR = profR(0);
+    // baseLean shifts the footing ring in/out relative to the base ring, tilting the
+    // splayed feet: positive splays outward, negative tucks the feet inward.
+    const lean = (p.baseLean===undefined) ? Math.max(0.6, baseR*0.22) : p.baseLean;
+    const footR = Math.max(0.3, baseR + lean);
+    const footBase = nodes.length;
+    for(let k=0;k<S;k++){
+      const th = 2*Math.PI*(k+0.5)/S; // footings sit at mid-sector, between two legs
+      nodes.push({ id:nodes.length, l:0, footing:true, pos:[footR*Math.cos(th), 0, footR*Math.sin(th)] });
+    }
+    for(let k=0;k<S;k++){
+      if(entr.has(k)) continue;
+      const a=idx(0,k);
+      const fL=footBase + ((k-1+S)%S), fR=footBase + k; // two legs form an A-frame
+      poles.push({ a, b:fL, family:'col', top:0 }); bamboo+=dist(a,fL);
+      poles.push({ a, b:fR, family:'col', top:0 }); bamboo+=dist(a,fR);
+    }
+    // horizontal poles (hoop rings) — optional, like the real build. When on,
+    // hoopEvery controls how many rib rings between each horizontal band.
+    const hoopsOn = p.hoops >= 0.5;
+    const hoopEvery = Math.max(1, Math.round(p.hoopEvery||1));
+    const hoopAt = (l)=> hoopsOn && (l % hoopEvery === 0);
+    // meridian ribs (follow the dome profile) + horizontal hoop rings
+    for(let l=0;l<L;l++){
+      for(let k=0;k<S;k++){
+        if(l===0 && entr.has(k)) continue;
+        const a=idx(l,k), up=idx(l+1,k);
+        poles.push({a, b:up, family:'rib', top:l+1}); bamboo+=dist(a,up);        // meridian
+        // hoop ring — but never let a ground hoop hang into an entrance node
+        if(hoopAt(l) && !(l===0 && entr.has((k+1)%S))){ poles.push({a, b:idx(l,k+1), family:'hoop', top:l}); bamboo+=dist(a,idx(l,k+1)); }
+      }
+    }
+    // Proper entrance opening. The centre ground node (eK) is a void — no foot,
+    // no ground rib, no cladding, not rendered. Frame it as a peaked doorway:
+    // each jamb node either side braces up-and-in to the ring-1 node directly
+    // above the void (the arch peak), and a lintel closes the top of the two
+    // opening bays (only when the ring-1 hoop isn't already drawing it).
+    for(const eK of entr){
+      const peak=idx(1,eK), jL=idx(0,eK-1), jR=idx(0,eK+1);
+      poles.push({a:jL, b:peak, family:'diag', top:1}); bamboo+=dist(jL,peak);
+      poles.push({a:jR, b:peak, family:'diag', top:1}); bamboo+=dist(jR,peak);
+      if(!hoopAt(1)){
+        for(const [x,y] of [[idx(1,eK-1),peak],[peak,idx(1,eK+1)]]){
+          poles.push({a:x, b:y, family:'hoop', top:1}); bamboo+=dist(x,y);
+        }
+      }
+    }
+    // top hoop ring (always closes the apex when hoops are on)
+    if(hoopsOn){ for(let k=0;k<S;k++){ const a=idx(L,k); poles.push({a, b:idx(L,k+1), family:'hoop', top:L}); bamboo+=dist(a,idx(L,k+1)); } }
+    // diagonal braces — cross each quad bay to triangulate the rib cage.
+    // 0 = none, 1 = single (leaning with the twist), 2 = cross / X-brace.
+    const diagMode = Math.round(p.diagonals||0);
+    if(diagMode>0){
+      for(let l=0;l<L;l++){
+        for(let k=0;k<S;k++){
+          if(l===0 && (entr.has(k) || entr.has(((k+1)%S)))) continue; // skip entrance bays at ground
+          const a=idx(l,k), up1=idx(l+1,k+1);
+          poles.push({a, b:up1, family:'diag', top:l+1}); bamboo+=dist(a,up1);
+          if(diagMode>=2){ const a2=idx(l,k+1), up2=idx(l+1,k); poles.push({a:a2, b:up2, family:'diag', top:l+1}); bamboo+=dist(a2,up2); }
+        }
+      }
+    }
+    // cladding: revolve facets (quad per meridian × band) — per-panel cyclable
+    const panels=[];
+    const skinFrac = p.skin/100;
+    for(let l=0;l<L;l++){
+      const bandFromTop = (L-l)/L;
+      for(let k=0;k<S;k++){
+        if(l===0 && (entr.has(k) || entr.has((k+1)%S))) continue; // open doorway bays
+        panels.push({ quad:[ idx(l,k), idx(l+1,k), idx(l+1,k+1), idx(l,k+1) ], l, k, key:l+'-'+k, band:bandFromTop });
+      }
+    }
+    const anchors = nodes.filter(n=>n.footing).length;
+    const panelArea = (2*Math.PI*R/S) * (H/L); // rough per-panel m²
+    return { nodes, poles, panels, S, L, oc, skinFrac, panelArea, footprint:footR,
+      meta:{ poleCount:poles.length, nodeCount:nodes.length, anchorCount:anchors,
+             bambooM:bamboo, fabricM2:0 } };
+  }
+
+  // ---------- three.js setup ----------
+  async componentDidMount(){
+    this._mounted=true;
+    const THREE = await import('three');
+    const { OrbitControls } = await import('three/addons/controls/OrbitControls.js');
+    const { PLYLoader } = await import('three/addons/loaders/PLYLoader.js');
+    this.THREE = THREE; this.OrbitControls = OrbitControls; this.PLYLoader = PLYLoader;
+    if(!this._mounted) return;
+    this.initScene();
+    // read share link
+    try{
+      const h = location.hash;
+      if(h.startsWith('#p=') && window.LZString){
+        const j = JSON.parse(LZString.decompressFromEncodedURIComponent(h.slice(3)));
+        if(j) this.setState({ mode:'studio', params:{...BANWAG, ...j} }, ()=>this.regen(true));
+      }
+    }catch(e){}
+    this.regen(true);
+  }
+  componentWillUnmount(){ this._mounted=false; cancelAnimationFrame(this._raf); this.renderer&&this.renderer.dispose(); }
+
+  mountRef = (el)=>{
+    if(el && !this._mountEl){ this._mountEl = el; if(this.renderer) el.appendChild(this.renderer.domElement); }
+  };
+
+  initScene(){
+    const THREE = this.THREE, el = this._mountEl;
+    const w = el.clientWidth||window.innerWidth, hh = el.clientHeight||window.innerHeight;
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x1a1915);
+    this.scene = scene;
+    const cam = new THREE.PerspectiveCamera(45, w/hh, 0.1, 1000);
+    cam.position.set(16, 11, 18); this.cam=cam;
+    const rnd = new THREE.WebGLRenderer({ antialias:true, preserveDrawingBuffer:true });
+    rnd.setSize(w,hh); rnd.setPixelRatio(Math.min(2,window.devicePixelRatio));
+    rnd.shadowMap.enabled=true; rnd.shadowMap.type=THREE.PCFSoftShadowMap;
+    this.renderer=rnd; el.appendChild(rnd.domElement);
+    const ctr = new this.OrbitControls(cam, rnd.domElement);
+    ctr.enableDamping=true; ctr.dampingFactor=0.08; ctr.target.set(0,4,0);
+    ctr.minDistance=0.5; ctr.maxDistance=60; ctr.maxPolarAngle=Math.PI; this.ctr=ctr;
+
+    // lights
+    this.hemi = new THREE.HemisphereLight(0xbfd4ff, 0x3a3428, 0.9); scene.add(this.hemi);
+    this.sun = new THREE.DirectionalLight(0xfff2d8, 1.6);
+    this.sun.position.set(14,22,10); this.sun.castShadow=true;
+    this.sun.shadow.mapSize.set(2048,2048); this.sun.shadow.camera.near=1; this.sun.shadow.camera.far=80;
+    const sc=this.sun.shadow.camera; sc.left=-20;sc.right=20;sc.top=20;sc.bottom=-20;
+    scene.add(this.sun);
+    this.amb = new THREE.AmbientLight(0xffffff, 0.25); scene.add(this.amb);
+
+    // ground plinth (square 15×15m, 300mm, polished concrete)
+    const slab = new THREE.Mesh(
+      new THREE.BoxGeometry(15, 0.3, 15),
+      new THREE.MeshStandardMaterial({ color:0x6f6c66, roughness:0.6, metalness:0.1 }));
+    slab.position.y=-0.15; slab.receiveShadow=true; scene.add(slab);
+    const grade = new THREE.Mesh(
+      new THREE.CircleGeometry(40,64),
+      new THREE.MeshStandardMaterial({ color:0x1f1d19, roughness:1 }));
+    grade.rotation.x=-Math.PI/2; grade.position.y=-0.01; grade.receiveShadow=true; scene.add(grade);
+    this.slab=slab; this.grade=grade; this._slabBase=15; this._gradeBase=40;
+
+    // materials
+    this.matBamboo = new THREE.MeshStandardMaterial({ color:COL.bamboo, roughness:0.7, metalness:0.05 });
+    this.matSteel = new THREE.MeshStandardMaterial({ color:COL.steel, roughness:0.35, metalness:0.9 });
+    this.matFabric = new THREE.MeshStandardMaterial({ color:0xE8DFC8, roughness:0.9, metalness:0, side:THREE.DoubleSide, emissive:0x2a2823, emissiveIntensity:0.15 });
+    this.matMesh = new THREE.MeshStandardMaterial({ color:0x9aa0a2, roughness:0.5, metalness:0.4, side:THREE.DoubleSide, transparent:true, opacity:0.32, emissive:0x1a1c1d, emissiveIntensity:0.1, wireframe:false });
+    this.matLED = new THREE.MeshStandardMaterial({ color:COL.bamboo, emissive:0x000000, emissiveIntensity:0, roughness:0.6 });
+
+    // instanced meshes at max counts
+    const maxS=26, maxL=12;
+    this.maxPoles = 6*maxS*(maxL+2); // ribs + hoops + up to X-bracing (2 diagonals/bay)
+    this.maxNodes = maxS*(maxL+2);
+    const cyl = new THREE.CylinderGeometry(0.06,0.06,1,8); cyl.translate(0,0.5,0); cyl.rotateX(0); 
+    this.poleGeo = new THREE.CylinderGeometry(0.06,0.06,1,8);
+    this.poleMesh = new THREE.InstancedMesh(this.poleGeo, this.matBamboo, this.maxPoles);
+    this.poleMesh.castShadow=true; this.poleMesh.frustumCulled=false; this.poleMesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+    scene.add(this.poleMesh);
+    this.nodeGeo = new THREE.SphereGeometry(0.11,10,8);
+    this.nodeMesh = new THREE.InstancedMesh(this.nodeGeo, this.matSteel, this.maxNodes);
+    this.nodeMesh.castShadow=true; this.nodeMesh.frustumCulled=false; this.nodeMesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+    scene.add(this.nodeMesh);
+    this.baseGeo = new THREE.CylinderGeometry(0.28,0.28,0.08,12);
+    this.baseMesh = new THREE.InstancedMesh(this.baseGeo, this.matSteel, maxS);
+    this.baseMesh.castShadow=true; scene.add(this.baseMesh);
+    // SS finial spike at apex
+    this.cone = new THREE.Mesh(new THREE.CylinderGeometry(0.03,0.14,1.1,12), this.matSteel);
+    this.cone.castShadow=true; scene.add(this.cone);
+    // fabric group
+    this.fabricMesh = new THREE.Mesh(new THREE.BufferGeometry(), this.matFabric);
+    this.fabricMesh.castShadow=false; scene.add(this.fabricMesh);
+    // mesh-cladding group (semi-open weatherproof mesh)
+    this.meshMesh = new THREE.Mesh(new THREE.BufferGeometry(), this.matMesh);
+    this.meshMesh.castShadow=false; scene.add(this.meshMesh);
+    // invisible pick mesh: every claddable panel, for tap-to-cycle
+    this.panelPick = new THREE.Mesh(new THREE.BufferGeometry(), new THREE.MeshBasicMaterial({visible:false}));
+    this.panelPick.visible=false; scene.add(this.panelPick);
+    this._panelMat = {}; // per-panel overrides keyed "l-k": 'open'|'fabric'|'mesh'
+    // beacon light
+    this.beacon = new THREE.PointLight(0xffd27f, 0, 30); this.beacon.position.set(0,10,0); scene.add(this.beacon);
+
+    // freestyle placement guides (hidden until freestyle mode)
+    this.guides = new THREE.Group(); this.guides.visible=false; scene.add(this.guides);
+    const grid = new THREE.GridHelper(24, 48, 0x4d8241, 0x3a3833);
+    grid.material.transparent=true; grid.material.opacity=0.5; grid.position.y=0.02;
+    this.guides.add(grid);
+    const axes = new THREE.Group();
+    const axMat=(c)=>new THREE.MeshBasicMaterial({color:c});
+    const mkAxis=(dir,color)=>{ const len=6;
+      const m=new THREE.Mesh(new THREE.CylinderGeometry(0.03,0.03,len,6), axMat(color));
+      m.position.copy(dir.clone().multiplyScalar(len/2));
+      m.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0), dir); axes.add(m);
+      const tip=new THREE.Mesh(new THREE.ConeGeometry(0.12,0.3,8), axMat(color));
+      tip.position.copy(dir.clone().multiplyScalar(len)); tip.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),dir); axes.add(tip);
+    };
+    mkAxis(new THREE.Vector3(1,0,0), 0xE0645A); // X red
+    mkAxis(new THREE.Vector3(0,1,0), 0x8FB98A); // Y green
+    mkAxis(new THREE.Vector3(0,0,1), 0x5A9BE0); // Z blue
+    this.guides.add(axes);
+    // snap-preview ghost: ground ring + vertical guide + top marker
+    this.ghost = new THREE.Group();
+    const ring=new THREE.Mesh(new THREE.TorusGeometry(0.4,0.05,8,24), new THREE.MeshBasicMaterial({color:0xE8DFC8}));
+    ring.rotation.x=Math.PI/2; ring.position.y=0.03; this.ghost.add(ring);
+    this.ghostStem=new THREE.Mesh(new THREE.CylinderGeometry(0.025,0.025,1,6), new THREE.MeshBasicMaterial({color:0x8FB98A,transparent:true,opacity:0.7}));
+    this.ghost.add(this.ghostStem);
+    this.ghostTop=new THREE.Mesh(new THREE.SphereGeometry(0.16,10,8), new THREE.MeshBasicMaterial({color:0xC9A46A}));
+    this.ghost.add(this.ghostTop);
+    this.guides.add(this.ghost);
+    // snap highlight ring shown around an existing node under the cursor
+    this.snapRing=new THREE.Mesh(new THREE.TorusGeometry(0.28,0.06,8,20), new THREE.MeshBasicMaterial({color:0x8FB98A}));
+    this.snapRing.visible=false; this.guides.add(this.snapRing);
+    // rubber-band preview line from the picked start node to the cursor target
+    this.rubberGeo=new THREE.BufferGeometry();
+    this.rubberGeo.setAttribute('position', new THREE.Float32BufferAttribute([0,0,0,0,0,0],3));
+    this.rubber=new THREE.Line(this.rubberGeo, new THREE.LineBasicMaterial({color:0xC9A46A}));
+    this.rubber.visible=false; this.guides.add(this.rubber);
+    this.selMarker=new THREE.Mesh(new THREE.TorusGeometry(0.3,0.07,8,20), new THREE.MeshBasicMaterial({color:0xC9A46A}));
+    this.selMarker.visible=false; this.guides.add(this.selMarker);
+
+    this._dummy = new THREE.Object3D();
+    this.applyNight(false);
+
+    window.addEventListener('resize', this._onResize);
+    // deter casual capture of the real Banwag geometry (deterrence, not a guarantee)
+    rnd.domElement.addEventListener('contextmenu', e=>e.preventDefault());
+    // picking for freestyle
+    this.raycaster = new THREE.Raycaster();
+    rnd.domElement.addEventListener('pointerdown', this._onPointer);
+    rnd.domElement.addEventListener('pointermove', this._onHover);
+    this.animate();
+  }
+
+  _onResize = ()=>{
+    if(!this.renderer||!this._mountEl) return;
+    const w=this._mountEl.clientWidth, h=this._mountEl.clientHeight;
+    this.cam.aspect=w/h; this.cam.updateProjectionMatrix(); this.renderer.setSize(w,h);
+  };
+
+  // ---------- geometry regen + morph ----------
+  regen(instant){
+    if(!this.scene) return;
+    const p = this.state.params;
+    const g = this.generate(p);
+    // build target node position array
+    const tgt = g.nodes.map(n=>n.pos.slice());
+    if(instant || !this._curPositions || this._curPositions.length!==tgt.length){
+      this._curPositions = tgt.map(a=>a.slice());
+      this._morph = null;
+    } else {
+      this._morph = { from:this._curPositions.map(a=>a.slice()), to:tgt, start:performance.now(), dur:250 };
+    }
+    this._gen = g;
+    this.buildInstances(g, this._curPositions);
+    this.buildFabric(g, this._curPositions);
+    // camera framing
+    if(instant){ this.frameCamera(p); }
+    this.setState({ gen:g.meta });
+  }
+
+  frameCamera(p){
+    const d = Math.max(p.radius, p.height)*1.9 + 6;
+    this.cam.position.set(d*0.75, p.height*0.85+3, d);
+    this.ctr.target.set(0, p.height*0.42, 0);
+  }
+
+  // ---------- real Banwag viewer (view-only reduced mesh) ----------
+  // show/hide all parametric-builder geometry in one call
+  setBuilderVisible(v){
+    ['poleMesh','nodeMesh','baseMesh','cone','fabricMesh','meshMesh'].forEach(k=>{ if(this[k]) this[k].visible=v; });
+  }
+
+  async loadReal(){
+    if(this.realMesh){ return; }
+    if(this._realLoading){ return; }
+    this._realLoading = true;
+    this.setState({ loadingReal:true, loadPct:0, realErr:'' });
+    try{
+      // fetch as bytes (with progress) then parse in-memory; the URL is not
+      // kept around and no object URL is exposed for download.
+      const res = await fetch(BANWAG_MESH_URL);
+      if(!res.ok) throw new Error('HTTP '+res.status);
+      const total = +res.headers.get('content-length') || 0;
+      let loaded = 0; const chunks = [];
+      const reader = res.body.getReader();
+      for(;;){
+        const { done, value } = await reader.read();
+        if(done) break;
+        chunks.push(value); loaded += value.length;
+        const pct = total ? Math.round(loaded/total*100) : 0;
+        this.setState({ loadPct:pct });
+      }
+      const buf = new Uint8Array(loaded); let off=0;
+      for(const c of chunks){ buf.set(c, off); off+=c.length; }
+      const geo = new this.PLYLoader().parse(buf.buffer);
+      geo.computeVertexNormals();
+      const mat = new this.THREE.MeshStandardMaterial({ color:COL.bamboo, roughness:0.72, metalness:0.05, flatShading:false });
+      const mesh = new this.THREE.Mesh(geo, mat);
+      mesh.castShadow = true; mesh.receiveShadow = true;
+      geo.computeBoundingBox();
+      this._realBox = geo.boundingBox.clone();
+      this.realMesh = mesh; this.scene.add(mesh);
+      this.setState({ loadingReal:false });
+    }catch(e){
+      this.setState({ loadingReal:false, realErr:(e&&e.message)||'load failed' });
+      this.flash('Could not load Banwag model');
+    }
+    this._realLoading = false;
+  }
+
+  frameReal(){
+    const b = this._realBox; if(!b) { this.frameCamera({radius:9,height:9}); return; }
+    const sx=b.max.x-b.min.x, sy=b.max.y-b.min.y, sz=b.max.z-b.min.z;
+    const foot=Math.max(sx,sz), cy=sy*0.45;
+    const d = Math.max(foot, sy)*1.4 + 4;
+    this.cam.position.set(d*0.7, sy*0.75+2, d);
+    this.ctr.target.set(0, cy, 0);
+  }
+
+  async enterViewer(){
+    if(this.guides) this.guides.visible=false;
+    this.setState({ mode:'viewer', night:false }, ()=>this.applyNight(false));
+    this.setBuilderVisible(false);
+    await this.loadReal();
+    if(this.state.mode!=='viewer') return;          // user navigated away while loading
+    if(this.realMesh) this.realMesh.visible=true;
+    this.frameReal();
+  }
+
+  buildInstances(g, positions){
+    const THREE=this.THREE, d=this._dummy;
+    // ground grows with footprint: keep a clear apron around the splayed feet
+    if(this.slab && g.footprint){
+      const span = (g.footprint + 2.5) * 2;          // full width incl. margin
+      const s = Math.max(1, span / this._slabBase);
+      this.slab.scale.set(s, 1, s);
+      this.grade.scale.setScalar(Math.max(1, span / this._gradeBase * 1.6));
+    }
+    const revealMax = this.state.mode==='raise' ? this.state.raiseLayer : 99;
+    // poles
+    let pc=0;
+    for(const pl of g.poles){
+      if(pl.top > revealMax){ continue; }
+      const A=positions[pl.a], B=positions[pl.b];
+      this.setCyl(d, A, B); d.updateMatrix();
+      this.poleMesh.setMatrixAt(pc++, d.matrix);
+    }
+    this.poleMesh.count=pc; this.poleMesh.instanceMatrix.needsUpdate=true;
+    // nodes
+    let nc=0;
+    for(const n of g.nodes){
+      if(n.l > revealMax || n.hidden){ continue; }
+      d.position.set(...positions[n.id]); d.scale.setScalar(1); d.rotation.set(0,0,0); d.updateMatrix();
+      this.nodeMesh.setMatrixAt(nc++, d.matrix);
+    }
+    this.nodeMesh.count=nc; this.nodeMesh.instanceMatrix.needsUpdate=true;
+    // baseplates sit under the footing ring (where the splayed feet plant)
+    let bc=0;
+    for(const n of g.nodes){ if(!n.footing) continue;
+      d.position.set(positions[n.id][0], 0.16, positions[n.id][2]); d.scale.setScalar(1); d.rotation.set(0,0,0); d.updateMatrix();
+      this.baseMesh.setMatrixAt(bc++, d.matrix);
+    }
+    this.baseMesh.count=bc; this.baseMesh.instanceMatrix.needsUpdate=true;
+    // central finial spike above the apex ring
+    const apexShown = revealMax >= g.L;
+    this.cone.visible = apexShown;
+    const apexY = positions[g.L*g.S] ? positions[g.L*g.S][1] : this.state.params.height;
+    this.cone.position.set(0, apexY+0.55, 0);
+  }
+
+  setCyl(d, A, B){
+    const THREE=this.THREE;
+    const ax=A[0],ay=A[1],az=A[2], bx=B[0],by=B[1],bz=B[2];
+    const dx=bx-ax,dy=by-ay,dz=bz-az; const len=Math.hypot(dx,dy,dz)||0.0001;
+    d.position.set((ax+bx)/2,(ay+by)/2,(az+bz)/2);
+    d.scale.set(1,len,1);
+    const up=this._up||(this._up=new THREE.Vector3(0,1,0));
+    const dir=this._dir||(this._dir=new THREE.Vector3());
+    dir.set(dx/len,dy/len,dz/len);
+    d.quaternion.setFromUnitVectors(up, dir);
+  }
+
+  buildFabric(g, positions){
+    const THREE=this.THREE;
+    const fv=[], mv=[], pv=[];
+    const tri=(arr,q)=>{ const a=positions[q[0]],b=positions[q[1]],c=positions[q[2]],d2=positions[q[3]];
+      arr.push(a[0],a[1],a[2], b[0],b[1],b[2], c[0],c[1],c[2]);
+      arr.push(a[0],a[1],a[2], c[0],c[1],c[2], d2[0],d2[1],d2[2]); };
+    const revealMax = this.state.mode==='raise' ? this.state.raiseLayer : 99;
+    const raiseHold = this.state.mode==='raise' && !this._fabricReady;
+    this._pickPanels = [];
+    for(const pan of g.panels){
+      if(raiseHold) continue;
+      tri(pv, pan.quad); this._pickPanels.push(pan); // pickable regardless of state
+      const st = this.panelStateFor(g, pan);
+      if(st==='fabric') tri(fv, pan.quad);
+      else if(st==='mesh') tri(mv, pan.quad);
+    }
+    const mk=(arr)=>{ const geo=new THREE.BufferGeometry(); geo.setAttribute('position', new THREE.Float32BufferAttribute(arr,3)); geo.computeVertexNormals(); return geo; };
+    this.fabricMesh.geometry.dispose(); this.fabricMesh.geometry=mk(fv);
+    this.meshMesh.geometry.dispose();   this.meshMesh.geometry=mk(mv);
+    this.panelPick.geometry.dispose();  this.panelPick.geometry=mk(pv);
+    const vis = this.state.cladding && this.state.mode!=='freestyle';
+    this.fabricMesh.visible=vis; this.meshMesh.visible=vis;
+    // clad area readout (fabric + mesh count × per-panel area)
+    const cladCount = vis ? (fv.length + mv.length)/18 : 0; // no clad area when cladding is off
+    const meta = this._gen ? this._gen.meta : null;
+    if(meta){ meta.fabricM2 = Math.round(cladCount * (g.panelArea||0)); this.setState({ gen:{...meta} }); }
+  }
+
+  // per-panel effective material: override wins, else skin% top-down fabric fill
+  panelStateFor(g, pan){
+    const o = this._panelMat[pan.key];
+    if(o) return o;
+    return pan.band <= g.skinFrac + 1e-6 ? 'fabric' : 'open';
+  }
+  cyclePanel(pan){
+    const g=this._gen; if(!g) return;
+    const cur = this.panelStateFor(g, pan);
+    const next = cur==='open' ? 'fabric' : cur==='fabric' ? 'mesh' : 'open';
+    this._panelMat[pan.key] = next;
+    this.buildFabric(g, this._curPositions);
+    this.flash(next==='open'?'Panel opened':next==='fabric'?'Marine fabric':'Weatherproof mesh');
+  }
+
+  animate = ()=>{
+    this._raf = requestAnimationFrame(this.animate);
+    const now=performance.now();
+    if(this._morph){
+      let t=(now-this._morph.start)/this._morph.dur;
+      if(t>=1){ t=1; }
+      const e=1-Math.pow(1-t,3);
+      const cur=this._curPositions;
+      for(let i=0;i<cur.length;i++){
+        const f=this._morph.from[i], to=this._morph.to[i];
+        cur[i][0]=f[0]+(to[0]-f[0])*e;
+        cur[i][1]=f[1]+(to[1]-f[1])*e;
+        cur[i][2]=f[2]+(to[2]-f[2])*e;
+      }
+      this.buildInstances(this._gen, cur);
+      if(t>=1){ this._morph=null; this.buildFabric(this._gen, cur); }
+    }
+    // night LED crossfade
+    if(this.state.night && this.matLED){
+      const palette=[0xffd27f,0x2fb56a,0x5aa9ff,0xd85ad8];
+      const cyc=(now/8000)%palette.length; const i=Math.floor(cyc); const f=cyc-i;
+      const c1=new this.THREE.Color(palette[i]), c2=new this.THREE.Color(palette[(i+1)%palette.length]);
+      c1.lerp(c2,f); this.matLED.emissive.copy(c1);
+    }
+    this.ctr&&this.ctr.update();
+    this.renderer&&this.renderer.render(this.scene,this.cam);
+  };
+
+  // ---------- night / day ----------
+  applyNight(night){
+    if(!this.scene) return;
+    const THREE=this.THREE;
+    if(night){
+      this.scene.background=new THREE.Color(0x07080d);
+      this.sun.intensity=0.15; this.hemi.intensity=0.25; this.amb.intensity=0.1;
+      this.poleMesh.material=this.matLED;
+      this.matBamboo.emissive=new THREE.Color(0x000000);
+    } else {
+      this.scene.background=new THREE.Color(0x1a1915);
+      this.sun.intensity=1.6; this.hemi.intensity=0.9; this.amb.intensity=0.25;
+      this.poleMesh.material=this.matBamboo;
+      if(this.beacon) this.beacon.intensity=0;
+    }
+  }
+
+  // ---------- picking (freestyle + raise tap) ----------
+  _groundPt(ev){
+    const THREE=this.THREE;
+    const r=this.renderer.domElement.getBoundingClientRect();
+    const mx=((ev.clientX-r.left)/r.width)*2-1, my=-((ev.clientY-r.top)/r.height)*2+1;
+    this.raycaster.setFromCamera({x:mx,y:my}, this.cam);
+    const pt=new THREE.Vector3();
+    const plane=new THREE.Plane(new THREE.Vector3(0,1,0),0);
+    if(this.raycaster.ray.intersectPlane(plane, pt)){
+      return [Math.round(pt.x*2)/2, 0, Math.round(pt.z*2)/2];
+    }
+    return null;
+  }
+
+  // find nearest existing node in screen space; returns {i, pos} or null
+  _pickNode(ev){
+    const THREE=this.THREE;
+    const r=this.renderer.domElement.getBoundingClientRect();
+    const px=ev.clientX-r.left, py=ev.clientY-r.top;
+    const v=new THREE.Vector3();
+    let best=-1, bd=26; // px threshold
+    this.free.nodes.forEach((n,i)=>{ if(!n) return;
+      v.set(n.pos[0],n.pos[1],n.pos[2]).project(this.cam);
+      const sx=(v.x*0.5+0.5)*r.width, sy=(-v.y*0.5+0.5)*r.height;
+      const d=Math.hypot(sx-px, sy-py);
+      if(d<bd){ bd=d; best=i; }
+    });
+    return best>=0 ? {i:best, pos:this.free.nodes[best].pos} : null;
+  }
+
+  // resolve where the cursor points: an existing node (snap) or a fresh ground point
+  _freeTarget(ev){
+    const snap=this._pickNode(ev);
+    if(snap) return { snap:true, i:snap.i, pos:snap.pos };
+    const g=this._groundPt(ev);
+    if(!g) return null;
+    const y = this.state.freeTool==='node' ? this.state.freeHeight : 0;
+    return { snap:false, pos:[g[0], y, g[2]] };
+  }
+
+  _onHover = (ev)=>{
+    if(this.state.mode!=='freestyle' || !this.ghost) return;
+    const t=this._freeTarget(ev);
+    if(!t){ this.ghost.visible=false; this.snapRing.visible=false; this.rubber.visible=false; return; }
+    const erase = this.state.freeTool==='eraser';
+    // snap highlight on existing node
+    if(t.snap){ this.snapRing.visible=true; this.snapRing.position.set(t.pos[0],t.pos[1],t.pos[2]); this.snapRing.lookAt(this.cam.position); this.ghost.visible=false; }
+    else { this.snapRing.visible=false; this.ghost.visible=true;
+      this.ghost.position.set(t.pos[0],0,t.pos[2]);
+      const hh=Math.max(0.001, t.pos[1]);
+      this.ghostStem.scale.set(1,hh,1); this.ghostStem.position.y=hh/2; this.ghostStem.visible=t.pos[1]>0.01;
+      this.ghostTop.position.y=hh; this.ghostTop.visible=t.pos[1]>0.01;
+      this.ghostTop.material.color.setHex(erase?0xE0645A:0xC9A46A);
+    }
+    // rubber band from picked start to cursor
+    if(this.state.freeTool==='pole' && this.free.selected!=null && this.free.nodes[this.free.selected]){
+      const a=this.free.nodes[this.free.selected].pos;
+      const p=this.rubberGeo.attributes.position.array;
+      p[0]=a[0];p[1]=a[1];p[2]=a[2]; p[3]=t.pos[0];p[4]=t.pos[1];p[5]=t.pos[2];
+      this.rubberGeo.attributes.position.needsUpdate=true; this.rubber.visible=true;
+    } else { this.rubber.visible=false; }
+  };
+
+  _onPointer = (ev)=>{
+    if(this.state.mode==='studio'){
+      if(!this.state.cladding || !this._pickPanels || !this._pickPanels.length) return;
+      const r=this.renderer.domElement.getBoundingClientRect();
+      const mx=((ev.clientX-r.left)/r.width)*2-1, my=-((ev.clientY-r.top)/r.height)*2+1;
+      this.raycaster.setFromCamera({x:mx,y:my}, this.cam);
+      const hit=this.raycaster.intersectObject(this.panelPick, false)[0];
+      if(hit){ const pan=this._pickPanels[Math.floor(hit.faceIndex/2)]; if(pan) this.cyclePanel(pan); }
+      return;
+    }
+    if(this.state.mode!=='freestyle') return;
+    const t=this._freeTarget(ev);
+    if(t) this.freePlace(t);
+  };
+
+  // ---------- freestyle model ----------
+  free = { nodes:[], poles:[], selected:null };
+
+  // ensure a node index for a target, creating one only if not snapped
+  _ensureNode(t){
+    if(t.snap) return t.i;
+    this.free.nodes.push({ pos:[t.pos[0], t.pos[1], t.pos[2]] });
+    return this.free.nodes.length-1;
+  }
+
+  freePlace(t){
+    const tool=this.state.freeTool;
+    if(tool==='node'){
+      if(!t.snap) this.free.nodes.push({ pos:[t.pos[0], this.state.freeHeight, t.pos[2]] });
+      this.freeRebuild();
+    } else if(tool==='pole'){
+      const ni=this._ensureNode(t);
+      if(this.free.selected==null){ this.free.selected=ni; this.freeRebuild(); return; }
+      if(this.free.selected!==ni && this.free.poles.length<300){
+        this.free.poles.push({ a:this.free.selected, b:ni });
+      }
+      this.free.selected=null; this.rubber.visible=false; this.freeRebuild();
+    } else if(tool==='eraser'){
+      if(t.snap){ this.free.poles=this.free.poles.filter(p=>p.a!==t.i&&p.b!==t.i); this.free.nodes[t.i]=null; this.freeRebuild(); }
+    }
+  }
+  freeRebuild(){
+    const d=this._dummy; let pc=0;
+    for(const p of this.free.poles){ const A=this.free.nodes[p.a], B=this.free.nodes[p.b]; if(!A||!B)continue;
+      this.setCyl(d,A.pos,B.pos); d.updateMatrix(); this.poleMesh.setMatrixAt(pc++,d.matrix); }
+    this.poleMesh.count=pc; this.poleMesh.instanceMatrix.needsUpdate=true;
+    let nc=0; for(const n of this.free.nodes){ if(!n)continue; d.position.set(...n.pos);d.scale.setScalar(1);d.rotation.set(0,0,0);d.updateMatrix(); this.nodeMesh.setMatrixAt(nc++,d.matrix); }
+    this.nodeMesh.count=nc; this.nodeMesh.instanceMatrix.needsUpdate=true;
+    this.baseMesh.count=0; this.cone.visible=false; this.fabricMesh.geometry.setAttribute('position', new this.THREE.Float32BufferAttribute([],3));
+    if(this.meshMesh) this.meshMesh.visible=false;
+    if(this.panelPick){ this.panelPick.geometry.setAttribute('position', new this.THREE.Float32BufferAttribute([],3)); }
+    this._pickPanels=[];
+    // persistent marker on the picked start node
+    if(this.selMarker){
+      const s=this.free.selected!=null && this.free.nodes[this.free.selected];
+      this.selMarker.visible=!!s;
+      if(s){ const p=this.free.nodes[this.free.selected].pos; this.selMarker.position.set(p[0],p[1],p[2]); this.selMarker.lookAt(this.cam.position); }
+    }
+    this.setState({ gen:{poleCount:this.free.poles.length, nodeCount:this.free.nodes.filter(Boolean).length, anchorCount:0, bambooM:0, fabricM2:0} });
+  }
+
+  // ---------- param + mode handlers ----------
+  setParam(id,val){
+    const params={...this.state.params, [id]:val};
+    this.setState({params}, ()=>this.regen(false));
+  }
+  randomParams(){
+    return {
+      radius:4+Math.random()*7, height:4+Math.random()*9, sectors:[12,16,18,20,26][Math.floor(Math.random()*5)],
+      layers:4+Math.floor(Math.random()*6), pointiness:Math.random(), twist:0.4+Math.random()*0.2,
+      oculus:Math.random()*0.15, entrances:[0,4,6,8][Math.floor(Math.random()*4)], skin:Math.floor(Math.random()*100),
+      hoops:Math.random()<0.85?1:0, hoopEvery:[1,1,2,3][Math.floor(Math.random()*4)],
+      diagonals:[0,0,1,1,2][Math.floor(Math.random()*5)], baseLean:-1+Math.random()*3.5 };
+  }
+  applyPreset(pr, instant){
+    this._panelMat = {}; // clear per-panel cladding overrides
+    this.setState({params:{...pr}}, ()=>this.regen(true));
+  }
+
+  renderVals(){
+    const st=this.state, meta=st.gen||{poleCount:0,nodeCount:0,anchorCount:0,bambooM:0,fabricM2:0};
+    const p=st.params;
+    const isBanwag = Object.keys(BANWAG).every(k=>Math.abs(p[k]-BANWAG[k])<0.001);
+    const sliders = SLIDER_DEFS.map(s=>({
+      label:s.label, min:s.min, max:s.max, step:s.step, value:p[s.id],
+      display:s.fmt(p[s.id]),
+      onInput:(e)=>this.setParam(s.id, parseFloat(e.target.value)),
+    }));
+    const co2 = Math.round(meta.bambooM * BAMBOO_KG_PER_M);
+    const toolStyle=(active)=>`font:600 13px Figtree;color:${active?'#131210':'#E8DFC8'};background:${active?'#3E6B35':'rgba(255,255,255,.06)'};border:1px solid ${active?'#4d8241':'rgba(255,255,255,.14)'};border-radius:10px;padding:8px 14px;cursor:pointer;`;
+    const tools=[
+      {label:'Pole',key:'pole'},{label:'Node',key:'node'},{label:'Eraser',key:'eraser'}
+    ].map(t=>({label:t.label, style:toolStyle(st.freeTool===t.key), onClick:()=>this.setState({freeTool:t.key})}));
+
+    return {
+      mountRef:this.mountRef,
+      showBack: st.mode!=='select',
+      modeLabel: st.mode==='studio'?'parametric studio':st.mode==='freestyle'?'freestyle':st.mode==='viewer'?'real banwag · view only':'',
+      freeHeight: st.freeHeight,
+      freeHeightLabel: st.freeHeight.toFixed(2)+' m',
+      setFreeHeight:(e)=>this.setState({freeHeight:parseFloat(e.target.value)}),
+      freeHint: st.freeTool==='pole' ? (this.free.selected!=null?'Now tap a second node — hover snaps to any existing node →':'Tap a node (or empty grid) to start a pole — hover snaps to nearby nodes') : st.freeTool==='node' ? 'Tap the grid to drop a node at the set height' : 'Tap a node to erase it and its poles',
+      showSelect: st.mode==='select',
+      showStudio: st.mode==='studio',
+      showReadout: st.mode==='studio',
+      showFree: st.mode==='freestyle',
+      showViewer: st.mode==='viewer',
+      showLoading: st.mode==='viewer' && st.loadingReal,
+      loadingPct: st.realErr ? st.realErr : (st.loadPct?st.loadPct+'%':'fetching…'),
+      viewerStatus: st.realErr ? ('⚠ '+st.realErr) : (st.loadingReal ? 'loading…' : 'reduced construction mesh · '+ (this._realBox? Math.round((this._realBox.max.x-this._realBox.min.x)) : 16) +' m footprint'),
+      showExport: st.mode==='studio' || st.mode==='freestyle',
+      showHelp: st.showHelp,
+      nightLabel: st.night?'Day':'Night',
+      groundLabel: st.showGround?'Ground: on':'Ground: off',
+      showCladdingToggle: st.mode==='studio',
+      claddingLabel: st.cladding?'Cladding: on':'Cladding: off',
+      claddingBtnStyle: `font:600 13px Figtree;color:${st.cladding?'#131210':'#E8DFC8'};background:${st.cladding?'#3E6B35':'rgba(255,255,255,.06)'};border:1px solid ${st.cladding?'#4d8241':'rgba(255,255,255,.14)'};border-radius:999px;padding:8px 16px;cursor:pointer;`,
+      toggleCladding:()=>{ const c=!st.cladding; this.setState({cladding:c}, ()=>{ if(this._gen && this._curPositions){ this.buildFabric(this._gen, this._curPositions); } else { const v=c && this.state.mode!=='freestyle'; if(this.fabricMesh) this.fabricMesh.visible=v; if(this.meshMesh) this.meshMesh.visible=v; } }); },
+      toast: st.toast,
+      sliders,
+      tools,
+      poleCount:meta.poleCount, nodeCount:meta.nodeCount, anchorCount:meta.anchorCount,
+      bambooM: (meta.bambooM||0).toFixed(0), fabricM2:(meta.fabricM2||0).toFixed(0), co2,
+      isBanwag,
+      // handlers
+      pickViewer:()=>this.enterViewer(),
+      pickStudio:()=>{ if(this.guides)this.guides.visible=false; if(this.realMesh)this.realMesh.visible=false; this.setBuilderVisible(true); this._panelMat={}; this.setState({mode:'studio', params:this.randomParams()}, ()=>this.regen(true)); },
+      pickFreestyle:()=>{ if(this.realMesh)this.realMesh.visible=false; this.setBuilderVisible(true); this.free={nodes:[],poles:[],selected:null}; this.setState({mode:'freestyle', freeTool:'pole'}, ()=>{ if(this.guides)this.guides.visible=true; this.frameCamera({radius:8,height:6}); this.freeRebuild(); }); },
+      backToSelect:()=>{ if(this.guides){this.guides.visible=false;} if(this.ghost)this.ghost.visible=false; if(this.realMesh)this.realMesh.visible=false; this.setState({mode:'select'}); },
+      toggleNight:()=>{ const n=!st.night; this.setState({night:n}, ()=>this.applyNight(n)); },
+      toggleGround:()=>{ const v=!st.showGround; this.setState({showGround:v}, ()=>{ if(this.slab)this.slab.visible=v; if(this.grade)this.grade.visible=v; }); },
+      toggleHelp:()=>this.setState({showHelp:!st.showHelp}),
+      presetBanwag:()=>this.applyPreset({...BANWAG}),
+      presetTower:()=>this.applyPreset({...BANWAG, radius:4, height:13, pointiness:0.85, layers:9, skin:70}),
+      presetPavilion:()=>this.applyPreset({...BANWAG, radius:11, height:5, pointiness:0.2, layers:5, skin:40}),
+      presetRandom:()=>this.applyPreset(this.randomParams()),
+      freeClear:()=>{ this.free={nodes:[],poles:[],selected:null}; this.freeRebuild(); },
+      doScreenshot:()=>this.screenshot(),
+      doShare:()=>this.share(),
+      doGLB:()=>this.exportModel('glb'),
+      doOBJ:()=>this.exportModel('obj'),
+    };
+  }
+
+  flash(msg){ this.setState({toast:msg}); clearTimeout(this._tt); this._tt=setTimeout(()=>this.setState({toast:''}),2200); }
+
+  screenshot(){
+    try{
+      this.renderer.render(this.scene,this.cam);
+      const url=this.renderer.domElement.toDataURL('image/png');
+      const a=document.createElement('a'); a.href=url; a.download='banwag.png'; a.click();
+      this.flash('Screenshot saved');
+    }catch(e){ this.flash('Screenshot blocked'); }
+  }
+  share(){
+    try{
+      const j=JSON.stringify(this.state.params);
+      const code=window.LZString?LZString.compressToEncodedURIComponent(j):btoa(j);
+      const url=location.origin+location.pathname+'#p='+code;
+      history.replaceState(null,'','#p='+code);
+      if(navigator.clipboard) navigator.clipboard.writeText(url);
+      this.flash('Share link copied');
+    }catch(e){ this.flash('Could not build link'); }
+  }
+  async exportModel(kind){
+    try{
+      const THREE=this.THREE;
+      const group=new THREE.Group();
+      const g=this._gen, pos=this._curPositions;
+      const d=new THREE.Object3D();
+      // poles merged as one instanced -> convert to group of meshes
+      const bambooMat=new THREE.MeshStandardMaterial({color:COL.bamboo,name:'bamboo'});
+      const steelMat=new THREE.MeshStandardMaterial({color:COL.steel,name:'steel'});
+      const src = this.state.mode==='freestyle'
+        ? this.free.poles.map(pl=>[this.free.nodes[pl.a]&&this.free.nodes[pl.a].pos, this.free.nodes[pl.b]&&this.free.nodes[pl.b].pos]).filter(x=>x[0]&&x[1])
+        : g.poles.map(pl=>[pos[pl.a],pos[pl.b]]);
+      const poleInst=new THREE.InstancedMesh(this.poleGeo, bambooMat, src.length); poleInst.name='bamboo';
+      src.forEach((s,i)=>{ this.setCyl(d,s[0],s[1]); d.updateMatrix(); poleInst.setMatrixAt(i,d.matrix); });
+      group.add(poleInst);
+      if(kind==='glb'){
+        const { GLTFExporter } = await import('three/addons/exporters/GLTFExporter.js');
+        new GLTFExporter().parse(group,(res)=>{
+          const blob=new Blob([res],{type:'model/gltf-binary'});
+          this._dl(blob,'banwag.glb'); this.flash('.glb downloaded');
+        }, ()=>this.flash('Export failed'), {binary:true});
+      } else {
+        // simple OBJ from pole line segments
+        let o='# Banwag Builder export\n'; let vi=1;
+        for(const s of src){ o+=`v ${s[0][0]} ${s[0][1]} ${s[0][2]}\nv ${s[1][0]} ${s[1][1]} ${s[1][2]}\nl ${vi} ${vi+1}\n`; vi+=2; }
+        this._dl(new Blob([o],{type:'text/plain'}),'banwag.obj'); this.flash('.obj downloaded');
+      }
+    }catch(e){ this.flash('Export failed'); }
+  }
+  _dl(blob,name){ const u=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=u; a.download=name; a.click(); setTimeout(()=>URL.revokeObjectURL(u),1000); }
+}
+</script>
+</body>
+</html>
