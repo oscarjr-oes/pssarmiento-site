@@ -44,7 +44,6 @@
 | Homepage Banwag image crop | Adjust framing so the face is not cropped | Low–medium |
 | Banwag award badge formatting | Improve `GOOD DESIGN AWARD PH 2026` line breaks/typography | Low |
 | Banwag CTA placement | Move `Visit Banwag` below the paragraph so it does not overlap text | Low |
-| Portal authentication | Add an identity provider; recommended next investigation is Firebase Auth or Cloudflare Access | Medium |
+| Portal authentication | **PARTIAL** — `portal.html` now links Team and Executive users to the Cloudflare Access-protected Pages deployments. Custom `os.` / `exec.` hostnames still require DNS-owner changes; the `pages.dev` links are the working interim route. | Low |
 
 `graphify-out/` is local generated analysis output and was not included in the website deployment.
-
