@@ -4,6 +4,7 @@ date: 2023-04-28 11:00:00
 category: "Newsletter"
 tags: [Luzon, Natasha Dumlao]
 author: Tin Terrible-Sarmiento
+cover: /assets/news/university-square.jpg
 summary: "University Square records its first lot sale, with building permits, project presentations, and landscaping underway."
 ---
 GOOD NEWS! We have our first sale for UNIVERSITY SQUARE. Our Buyer is Engr. Leo Marpuri.

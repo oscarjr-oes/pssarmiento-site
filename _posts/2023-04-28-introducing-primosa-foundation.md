@@ -3,6 +3,7 @@ title: "Introducing, Primosa Foundation"
 date: 2023-04-28 08:00:00
 category: "Newsletter"
 author: Tin Terrible-Sarmiento
+cover: /assets/news/introducing-primosa-foundation.png
 summary: "The Sarmiento family's third generation introduces Primosa Foundation, dedicated to community access, education, and entrepreneurial opportunity."
 ---
 ## About the Foundation
