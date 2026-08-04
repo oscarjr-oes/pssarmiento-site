@@ -38,7 +38,7 @@
 
 | Item | Owner/action | Effort |
 |---|---|---|
-| Configure `news.pssarmiento.com` in Wix and DNS | Wix administrator connects the subdomain and adds Wix's supplied `news` CNAME target | Medium |
+| ~~Configure `news.pssarmiento.com` in Wix and DNS~~ Superseded — see `docs/NEWS-MIGRATION-PLAN.md` (2026-08-04): News/Blog moves to `pssarmiento.com/news/` on GitHub Pages via Decap CMS, no DNS change required | Jun / news editor, per new plan | Medium |
 | Hide non-News Wix pages | Wix administrator keeps the existing Blog/CMS and hides/removes duplicate non-News pages | Medium |
 | Confirm GA4 Realtime | Open GA4 Realtime after visiting the live site; tag deployment is complete, but Realtime access was not available to Codex | Low |
 | Homepage Banwag image crop | Adjust framing so the face is not cropped | Low–medium |
