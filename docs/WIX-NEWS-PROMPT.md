@@ -1,6 +1,6 @@
 # Wix News Subdomain — Remaining Execution Prompt
 
-**Status:** OPEN
+**Status:** SUPERSEDED — see `docs/NEWS-MIGRATION-PLAN.md` (2026-08-04). News/Blog is moving to GitHub Pages + Decap CMS instead of Wix, since neither Wix nor DNS are managed by Jun. This file kept for history.
 
 **AI handoff stamp:** OpenAI Codex, GPT-5-based agent · 2026-07-24 · Medium effort expected.
 

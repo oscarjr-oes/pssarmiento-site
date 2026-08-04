@@ -1,0 +1,27 @@
+title: PS Group of Companies — News
+description: News and updates from PS Group of Companies
+url: "https://pssarmiento.com"
+baseurl: ""
+
+markdown: kramdown
+permalink: /news/:slug/
+
+collections:
+  posts:
+    output: true
+    permalink: /news/:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - docs/
+  - graphify-out/
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/

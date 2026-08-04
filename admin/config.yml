@@ -1,0 +1,35 @@
+backend:
+  name: github
+  repo: oscarjr-oes/pssarmiento-site
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+publish_mode: editorial_workflow
+
+media_folder: "assets/news"
+public_folder: "/assets/news"
+
+site_url: https://pssarmiento.com
+display_url: https://pssarmiento.com
+
+collections:
+  - name: "posts"
+    label: "News Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "news/{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["News & Events", "Foundation", "Projects", "Newsletter"]
+        default: "News & Events"
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Cover Image", name: "cover", widget: "image", required: false }
+      - { label: "Summary", name: "summary", widget: "text", required: false, hint: "Short teaser shown in link previews and search results." }
+      - { label: "Author", name: "author", widget: "string", default: "admin", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
