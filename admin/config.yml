@@ -2,7 +2,7 @@ backend:
   name: github
   repo: oscarjr-oes/pssarmiento-site
   branch: main
-  base_url: https://api.netlify.com
+  base_url: https://astounding-torrone-689f38.netlify.app
   auth_endpoint: auth
 
 publish_mode: editorial_workflow
