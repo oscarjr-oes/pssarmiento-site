@@ -38,15 +38,13 @@ This plan instead folds News into the existing GitHub Pages site (`oscarjr-oes/p
 
 *("Introducing, Primosa Foundation" was a card linking to the internal Primosa page, not a real Wix blog post — excluded.)*
 
-## 2. Blocking dependency — this cannot be scraped blind
+## 2. Blocking dependency — RESOLVED 2026-08-04
 
-Full post bodies (not just the teaser text above) live only inside the Wix editor/CMS. `news.pssarmiento.com` currently returns an empty page (DNS points at Wix but nothing serves), and no working public Wix preview URL (e.g. `xxxxx.wixsite.com/...`) is recorded anywhere in local files. **Before any content migration can start, Jun needs one of the following from whoever manages the Wix site:**
+Jun has Wix admin access. Using the connected Chrome browser, all 13 published posts were opened in the Wix Studio Blog editor and their full body text extracted directly — see `docs/WIX-POSTS-EXPORT.md` for the complete content (all 13 posts, full text, in migration-ready Markdown). The 1 item sitting in Drafts is titled "Test" with a placeholder image — not real content, excluded.
 
-1. **Preferred:** Temporary read-only ("Viewer" or "Contributor") access to the Wix dashboard, so posts can be copied out directly (full text, all images at full resolution, correct dates/categories) — cleanest and fastest.
-2. **Fallback:** The live/preview Wix URL (even the default `*.wixsite.com` one, if `news.pssarmiento.com` never finished connecting) so pages can be fetched and the rendered text extracted. This recovers visible content but not things like alt text, SEO metadata, or unpublished drafts.
-3. **Fallback:** Ask them to manually export/copy each post's text into a shared doc. Lowest tech lift for them, highest manual effort on both sides.
+**Update:** the 2 posts that genuinely had gaps (Garage Sale for a Cause, MOU Signing: FLP and MHSD) had collapsed accordion sections in the Wix editor that the initial plain-text pass didn't expand. Both were re-opened, expanded, and re-extracted in full — see `docs/WIX-POSTS-EXPORT.md`. (A third post, PS Group meeting with Cotabato State University Heads, was flagged in error on the first pass — it was already complete.) All 13 posts are now fully captured with no known content gaps.
 
-Without one of these, migration can only carry forward the 8 teaser summaries above — not full articles. **This is the one step in this plan that only a human can unblock.**
+Phase 4 (content migration) is now unblocked and can proceed.
 
 ## 3. Target architecture
 
