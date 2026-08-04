@@ -5,6 +5,9 @@ category: "News & Events"
 tags: [press release]
 author: Tin Terrible-Sarmiento
 cover: /assets/news/new-bamboo-treatment-facility-maguindanao.jpg
+gallery:
+  - /assets/news/new-bamboo-treatment-facility-maguindanao-gallery/photo-1.jpg
+  - /assets/news/new-bamboo-treatment-facility-maguindanao-gallery/photo-2.jpg
 summary: "A new bamboo treatment facility in Parang, Maguindanao, built with FLP Construction and Agricultural Development Corp., will supply treated bamboo for Cement-Bamboo Frame housing across Mindanao."
 ---
 In the Philippines, bamboo is the gift that keeps on building–a natural construction material that has, and continues to, provide families with safe, affordable, and resilient homes; create new communities across the country; generate sustainable livelihood; and establish innovative technology to further grow the bamboo industry.

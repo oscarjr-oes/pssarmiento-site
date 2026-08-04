@@ -4,6 +4,15 @@ date: 2026-05-19
 category: "News & Events"
 author: admin
 cover: /assets/news/garage-sale-for-a-cause.jpg
+gallery:
+  - /assets/news/garage-sale-for-a-cause-gallery/photo-1.jpg
+  - /assets/news/garage-sale-for-a-cause-gallery/photo-2.jpg
+  - /assets/news/garage-sale-for-a-cause-gallery/photo-3.jpg
+  - /assets/news/garage-sale-for-a-cause-gallery/photo-4.jpg
+  - /assets/news/garage-sale-for-a-cause-gallery/photo-5.jpg
+  - /assets/news/garage-sale-for-a-cause-gallery/photo-6.jpg
+  - /assets/news/garage-sale-for-a-cause-gallery/photo-7.jpg
+  - /assets/news/garage-sale-for-a-cause-gallery/photo-8.jpg
 summary: "PS Family's Garage Sale for a Cause has raised ₱19,230 for scholars of Bulacan State University – Sarmiento Campus."
 ---
 Education is the foundation of opportunity - and at PS Family, we believe every student deserves the chance to pursue their dreams. That's why we launched our Garage Sale for a Cause, a heartfelt initiative dedicated to raising funds for the SCHOLARS of Bulacan State University - Sarmiento Campus.
