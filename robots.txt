@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /portal.html
+
+Sitemap: https://pssarmiento.com/sitemap.xml

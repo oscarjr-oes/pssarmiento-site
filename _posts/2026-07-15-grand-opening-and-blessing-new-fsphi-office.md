@@ -5,6 +5,7 @@ category: "News & Events"
 tags: [Luzon]
 author: admin
 cover: /assets/news/grand-opening-and-blessing-new-fsphi-office/cover.jpg
+image: /assets/news/grand-opening-and-blessing-new-fsphi-office/cover.jpg
 gallery:
   - /assets/news/grand-opening-and-blessing-new-fsphi-office/photo-1.jpg
   - /assets/news/grand-opening-and-blessing-new-fsphi-office/photo-3.jpg
@@ -14,7 +15,7 @@ gallery:
   - /assets/news/grand-opening-and-blessing-new-fsphi-office/photo-7.jpg
   - /assets/news/grand-opening-and-blessing-new-fsphi-office/photo-8.jpg
   - /assets/news/grand-opening-and-blessing-new-fsphi-office/photo-9.jpg
-summary: "First Sarmiento Property Holdings, Inc. celebrates the grand opening and blessing of its new office in University Square Subdivision, San Jose del Monte, Bulacan."
+description: "First Sarmiento Property Holdings, Inc. celebrates the grand opening and blessing of its new office in University Square Subdivision, San Jose del Monte, Bulacan."
 ---
 First Sarmiento Property Holdings, Inc. is pleased to announce the successful grand opening and blessing of its new office, located at Block 1, Lot 1, University Square Subdivision, Barangay Kaypian, City of San Jose del Monte, Bulacan.
 

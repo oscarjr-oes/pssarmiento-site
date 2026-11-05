@@ -3,7 +3,7 @@ title: "Letter from the Chairman"
 date: 2023-04-28 14:00:00
 category: "Newsletter"
 author: Tin Terrible-Sarmiento
-summary: "Jackie reflects on a strong start to 2023 across Luzon and Mindanao projects, ahead of the next 3rd Gen Board meeting."
+description: "Jackie reflects on a strong start to 2023 across Luzon and Mindanao projects, ahead of the next 3rd Gen Board meeting."
 ---
 Dear Board,
 
