@@ -27,13 +27,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
 <style>
+  picture{display:contents}source{display:none}
   body{margin:0;background:#122611;font-family:"Figtree",system-ui,sans-serif;color:#fff}
   a{color:#EBCF9E;text-decoration:none}
 </style>
 </helmet>
 
 <div style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;text-align:center">
-  <img src="assets/logos/ps-group.png" style="width:56px;height:56px;object-fit:contain;margin-bottom:28px" alt="">
+  <picture><source type="image/webp" srcset="assets/logos/ps-group.128w.webp 128w, assets/logos/ps-group.256w.webp 256w, assets/logos/ps-group.512w.webp 512w" sizes="56px"><img src="assets/logos/ps-group.png" width="3300" height="2914" alt="" style="width:56px;height:56px;object-fit:contain;margin-bottom:28px" decoding="async"></picture>
   <div style="font:600 11px ui-monospace,Menlo,monospace;letter-spacing:.16em;color:#EBCF9E;text-transform:uppercase;margin-bottom:18px">Internal use only</div>
   <h1 style="font:400 34px/1.2 Newsreader;margin:0 0 14px">PS Group Portal</h1>
   <p style="font:400 15px/1.6 Figtree;color:rgba(255,255,255,.7);max-width:420px;margin:0 0 36px">Sign in with your PS Group account to access the Company OS dashboard.</p>

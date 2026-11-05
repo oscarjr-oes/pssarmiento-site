@@ -32,6 +32,7 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
 <style>
+  picture{display:contents}source{display:none}
   html,body{margin:0;padding:0;height:100%;background:#131210;overflow:hidden;font-family:Figtree,system-ui,sans-serif;color:#E8DFC8;-webkit-font-smoothing:antialiased;}
   *{box-sizing:border-box;}
   a{color:#8FB98A;text-decoration:none;} a:hover{color:#B7D6B2;}
@@ -56,7 +57,7 @@
         <span style="font-weight:800;font-size:19px;letter-spacing:-.02em;">Build Your Own Banwag</span>
         <span style="font-family:'Space Mono',monospace;font-size:11px;color:#8a8d8f;">{{ modeLabel }}</span>
       </div>
-      <a href="banwag.html" style="display:flex;align-items:center;gap:8px;font:700 13px Figtree;color:#E8DFC8;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:6px 15px 6px 6px;text-decoration:none;margin-left:6px;"><span style="width:24px;height:24px;border-radius:50%;background:#F3EAD6;display:flex;align-items:center;justify-content:center;flex:none;"><img src="assets/logos/ps-group.png" alt="" style="width:18px;height:18px;object-fit:contain"></span>← Banwag</a>
+      <a href="banwag.html" style="display:flex;align-items:center;gap:8px;font:700 13px Figtree;color:#E8DFC8;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:6px 15px 6px 6px;text-decoration:none;margin-left:6px;"><span style="width:24px;height:24px;border-radius:50%;background:#F3EAD6;display:flex;align-items:center;justify-content:center;flex:none;"><picture><source type="image/webp" srcset="assets/logos/ps-group.128w.webp 128w, assets/logos/ps-group.256w.webp 256w, assets/logos/ps-group.512w.webp 512w" sizes="18px"><img src="assets/logos/ps-group.png" width="3300" height="2914" alt="" style="width:18px;height:18px;object-fit:contain" decoding="async"></picture></span>← Banwag</a>
     </div>
     <div style="display:flex;gap:8px;pointer-events:auto;">
       <sc-if value="{{ showCladdingToggle }}" hint-placeholder-val="{{ false }}">

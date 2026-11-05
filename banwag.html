@@ -26,6 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
 <style>
+  picture{display:contents}source{display:none}
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { margin: 0; background: #131210; font-family: 'Figtree', system-ui, sans-serif; color: #FAFAF7; -webkit-font-smoothing: antialiased; }
@@ -50,7 +51,7 @@
   <!-- ============ NAV ============ -->
   <nav data-nav style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; justify-content: space-between; align-items: center; padding: 18px 44px; transition: background .35s ease, padding .35s ease, border-color .35s ease; border-bottom: 1px solid rgba(250,250,247,0); background: rgba(19,18,16,0);">
     <a href="index.html" style="display: flex; align-items: center; gap: 11px; color: #FAFAF7;">
-      <span style="width:34px;height:34px;border-radius:50%;background:#F3EAD6;display:flex;align-items:center;justify-content:center;flex:none;"><img src="assets/logos/ps-group.png" alt="" style="width:22px;height:22px;object-fit:contain"></span>
+      <span style="width:34px;height:34px;border-radius:50%;background:#F3EAD6;display:flex;align-items:center;justify-content:center;flex:none;"><picture><source type="image/webp" srcset="assets/logos/ps-group.128w.webp 128w, assets/logos/ps-group.256w.webp 256w, assets/logos/ps-group.512w.webp 512w" sizes="22px"><img src="assets/logos/ps-group.png" width="3300" height="2914" alt="" style="width:22px;height:22px;object-fit:contain" decoding="async"></picture></span>
       <span style="font-weight: 700; font-size: 16px; letter-spacing: 0.01em;">PS Group</span>
     </a>
     <div style="display: flex; gap: 30px; font-size: 14px; font-weight: 500; align-items: center;">
@@ -65,7 +66,7 @@
 
   <!-- ============ HERO ============ -->
   <header id="top" data-screen-label="Hero" style="position: relative; height: 100vh; min-height: 720px; display: flex; align-items: flex-end; justify-content: center; overflow: hidden;">
-    <div style="position: absolute; inset: 0; background: url('assets/photos/hero-golden.jpg') center 52% / cover;"></div>
+    <picture><source type="image/webp" srcset="assets/photos/hero-golden.480w.webp 480w, assets/photos/hero-golden.960w.webp 960w, assets/photos/hero-golden.1600w.webp 1600w" sizes="100vw"><img src="assets/photos/hero-golden.jpg" width="4000" height="3000" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 52%" fetchpriority="high" decoding="async"></picture>
     <div style="position: absolute; inset: 0; background: radial-gradient(ellipse 60% 52% at 50% 44%, rgba(19,18,16,0) 0%, rgba(19,18,16,0.28) 52%, rgba(19,18,16,0.9) 100%);"></div>
     <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(19,18,16,0.55) 0%, rgba(19,18,16,0) 26%, rgba(19,18,16,0) 50%, rgba(19,18,16,0.95) 100%);"></div>
     <div class="glow-breathe" style="position: absolute; left: 50%; top: 40%; width: 900px; height: 620px; pointer-events: none; background: radial-gradient(ellipse 50% 42% at 50% 50%, rgba(240,215,160,0.4) 0%, rgba(240,215,160,0.12) 46%, rgba(240,215,160,0) 72%); mix-blend-mode: screen; animation: banwagGlow 7s ease-in-out infinite;"></div>
@@ -111,14 +112,14 @@
           <p style="font-size: 1.08rem; line-height: 1.62; color: rgba(250,250,247,0.82); margin: 18px 0 0;">Banwag holds physical space for safe conversations among Muslim, Christian, and Lumad communities. Six identical entrances ring its perimeter — no hierarchy of entry. Everyone arrives the same way. True dialogue needs neutral, beautiful ground.</p>
         </div>
         <div data-reveal style="height: 460px; border-radius: 16px; overflow: hidden; position: relative;">
-          <img data-lightbox src="assets/photos/interior-glow.jpg" alt="Interior of the Banwag dome glowing at dusk, bamboo lattice visible" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
+          <picture><source type="image/webp" srcset="assets/photos/interior-glow.480w.webp 480w, assets/photos/interior-glow.960w.webp 960w, assets/photos/interior-glow.1600w.webp 1600w" sizes="(max-width: 1180px) 45vw, 530px"><img src="assets/photos/interior-glow.jpg" width="1800" height="1350" alt="Interior of the Banwag dome glowing at dusk, bamboo lattice visible" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in" loading="lazy" decoding="async" data-lightbox data-full="assets/photos/interior-glow.1600w.webp"></picture>
         </div>
       </div>
 
       <!-- 2: geometry -->
       <div style="max-width: 1180px; margin: 0 auto; padding: 40px 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;">
         <div data-reveal style="order: 2; height: 460px; border-radius: 16px; overflow: hidden;">
-          <img data-lightbox src="assets/photos/ceiling-radial.jpg" alt="Radial bamboo lattice at the dome's apex" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
+          <picture><source type="image/webp" srcset="assets/photos/ceiling-radial.480w.webp 480w, assets/photos/ceiling-radial.960w.webp 960w, assets/photos/ceiling-radial.1600w.webp 1600w" sizes="(max-width: 1180px) 45vw, 530px"><img src="assets/photos/ceiling-radial.jpg" width="4000" height="3000" alt="Radial bamboo lattice at the dome&#x27;s apex" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in" loading="lazy" decoding="async" data-lightbox data-full="assets/photos/ceiling-radial.1600w.webp"></picture>
         </div>
         <div data-reveal style="order: 1;">
           <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #EBCF9E;">02 — The geometry</div>
@@ -136,7 +137,7 @@
           <p data-reveal style="font-size: 1rem; line-height: 1.6; color: rgba(250,250,247,0.6); margin: 26px 0 0; padding-top: 22px; border-top: 1px solid rgba(235,207,158,0.2); font-family: 'Newsreader', serif; font-style: italic;">In memory of Bambina Sarmiento, who first showed us that bamboo can build beautiful, and Pablo Sarmiento, founder of PS Group.</p>
         </div>
         <div data-reveal style="height: 460px; border-radius: 16px; overflow: hidden;">
-          <img data-lightbox src="assets/photos/node-detail.jpg" alt="Patented stainless steel node connector joining bamboo poles" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;">
+          <picture><source type="image/webp" srcset="assets/photos/node-detail.480w.webp 480w, assets/photos/node-detail.960w.webp 960w, assets/photos/node-detail.1600w.webp 1600w" sizes="(max-width: 1180px) 45vw, 530px"><img src="assets/photos/node-detail.jpg" width="4000" height="3000" alt="Patented stainless steel node connector joining bamboo poles" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in" loading="lazy" decoding="async" data-lightbox data-full="assets/photos/node-detail.1600w.webp"></picture>
         </div>
       </div>
     </section>
@@ -162,15 +163,15 @@
       </div>
       <div data-drawings style="display: flex; gap: 20px; overflow-x: auto; padding: 4px 44px 44px; scroll-snap-type: x mandatory;">
         <figure style="flex: 0 0 clamp(360px, 60vw, 640px); margin: 0; scroll-snap-align: start;">
-          <img data-lightbox src="assets/drawings/01-sheet.png" alt="Sheet 1 — Vicinity map, site development plan, and render perspective" style="width: 100%; border-radius: 12px; border: 1px solid rgba(235,207,158,0.2); cursor: zoom-in; display: block;">
+          <picture><source type="image/webp" srcset="assets/drawings/01-sheet.924w.webp 924w" sizes="(max-width: 1067px) max(360px, 60vw), 640px"><img src="assets/drawings/01-sheet.png" width="924" height="540" alt="Sheet 1 — Vicinity map, site development plan, and render perspective" style="width: 100%; border-radius: 12px; border: 1px solid rgba(235,207,158,0.2); cursor: zoom-in; display: block;height:auto" loading="lazy" decoding="async" data-lightbox data-full="assets/drawings/01-sheet.924w.webp"></picture>
           <figcaption style="font-size: 13px; color: rgba(250,250,247,0.6); margin-top: 12px;">Sheet 1 — Site development &amp; render</figcaption>
         </figure>
         <figure style="flex: 0 0 clamp(360px, 60vw, 640px); margin: 0; scroll-snap-align: start;">
-          <img data-lightbox src="assets/drawings/02-sheet.png" alt="Sheet 3 — Front, rear, left and right elevation plans" style="width: 100%; border-radius: 12px; border: 1px solid rgba(235,207,158,0.2); cursor: zoom-in; display: block;">
+          <picture><source type="image/webp" srcset="assets/drawings/02-sheet.924w.webp 924w" sizes="(max-width: 1067px) max(360px, 60vw), 640px"><img src="assets/drawings/02-sheet.png" width="924" height="540" alt="Sheet 3 — Front, rear, left and right elevation plans" style="width: 100%; border-radius: 12px; border: 1px solid rgba(235,207,158,0.2); cursor: zoom-in; display: block;height:auto" loading="lazy" decoding="async" data-lightbox data-full="assets/drawings/02-sheet.924w.webp"></picture>
           <figcaption style="font-size: 13px; color: rgba(250,250,247,0.6); margin-top: 12px;">Sheet 3 — Elevations</figcaption>
         </figure>
         <figure style="flex: 0 0 clamp(360px, 60vw, 640px); margin: 0; scroll-snap-align: start;">
-          <img data-lightbox src="assets/drawings/03-sheet.png" alt="Sheet 4 — Cross-sectional and longitudinal views" style="width: 100%; border-radius: 12px; border: 1px solid rgba(235,207,158,0.2); cursor: zoom-in; display: block;">
+          <picture><source type="image/webp" srcset="assets/drawings/03-sheet.924w.webp 924w" sizes="(max-width: 1067px) max(360px, 60vw), 640px"><img src="assets/drawings/03-sheet.png" width="924" height="540" alt="Sheet 4 — Cross-sectional and longitudinal views" style="width: 100%; border-radius: 12px; border: 1px solid rgba(235,207,158,0.2); cursor: zoom-in; display: block;height:auto" loading="lazy" decoding="async" data-lightbox data-full="assets/drawings/03-sheet.924w.webp"></picture>
           <figcaption style="font-size: 13px; color: rgba(250,250,247,0.6); margin-top: 12px;">Sheet 4 — Sections</figcaption>
         </figure>
       </div>
@@ -180,7 +181,7 @@
   <!-- ============ BEACON / NIGHT ============ -->
   <section data-screen-label="The beacon" style="position: relative;">
     <div style="position: relative; height: 62vh; min-height: 440px; overflow: hidden;">
-      <div style="position: absolute; inset: 0; background: url('assets/photos/night-led.jpg') center 44% / cover;"></div>
+      <picture><source type="image/webp" srcset="assets/photos/night-led.480w.webp 480w, assets/photos/night-led.960w.webp 960w, assets/photos/night-led.1440w.webp 1440w" sizes="100vw"><img src="assets/photos/night-led.jpg" width="1440" height="1080" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 44%" loading="lazy" decoding="async"></picture>
       <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(19,18,16,0) 40%, rgba(19,18,16,0.55) 78%, #131210 100%);"></div>
     </div>
     <div style="position: relative; z-index: 2; max-width: 760px; margin: -40px auto 0; padding: 0 32px 96px; text-align: center;">
@@ -264,7 +265,7 @@
 
       <!-- 360 -->
       <button data-video-open style="border: 1px solid rgba(235,207,158,0.4); border-radius: 18px; overflow: hidden; position: relative; min-height: 340px; display: flex; padding: 0; cursor: pointer; background: none; font-family: inherit; text-align: left; width: 100%;" data-reveal>
-        <img src="assets/photos/interior-lattice.jpg" alt="Looking up at the bamboo lattice from inside" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.55;">
+        <picture><source type="image/webp" srcset="assets/photos/interior-lattice.480w.webp 480w, assets/photos/interior-lattice.960w.webp 960w, assets/photos/interior-lattice.1600w.webp 1600w" sizes="(max-width: 1180px) 45vw, 530px"><img src="assets/photos/interior-lattice.jpg" width="4000" height="3000" alt="Looking up at the bamboo lattice from inside" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.55" loading="lazy" decoding="async"></picture>
         <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(19,18,16,0.15) 0%, rgba(19,18,16,0.9) 100%);"></div>
         <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
           <span style="width: 68px; height: 68px; border-radius: 50%; background: rgba(250,250,247,0.12); border: 1.5px solid rgba(250,250,247,0.5); display: flex; align-items: center; justify-content: center; font-size: 22px; color: #FAFAF7;">▶</span>
@@ -278,7 +279,7 @@
 
       <!-- Builder portal — live, links to the parametric mini-game -->
       <a href="banwag-builder.html" data-reveal data-game-slot style="border: 1px solid rgba(235,207,158,0.4); border-radius: 18px; overflow: hidden; position: relative; min-height: 340px; display: flex; background: #171512;">
-        <img src="assets/photos/ceiling-radial.jpg" alt="Radial bamboo structure" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.28;">
+        <picture><source type="image/webp" srcset="assets/photos/ceiling-radial.480w.webp 480w, assets/photos/ceiling-radial.960w.webp 960w, assets/photos/ceiling-radial.1600w.webp 1600w" sizes="(max-width: 1180px) 45vw, 530px"><img src="assets/photos/ceiling-radial.jpg" width="4000" height="3000" alt="Radial bamboo structure" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.28" loading="lazy" decoding="async"></picture>
         <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, rgba(235,207,158,0.16) 0%, rgba(19,18,16,0.92) 70%);"></div>
         <div style="position: relative; z-index: 2; margin: auto; padding: 32px; text-align: center;">
           <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #EBCF9E;">Banwag Builder</div>
@@ -354,7 +355,7 @@
   <!-- ============ 360 VIDEO POPUP ============ -->
   <div data-video-modal style="position: fixed; inset: 0; z-index: 100; display: none; align-items: center; justify-content: center; background: rgba(9,8,7,0.94); padding: 40px;">
     <button data-video-close style="position: absolute; top: 24px; right: 28px; background: none; border: none; color: #fff; font-size: 34px; cursor: pointer; line-height: 1;">×</button>
-    <video data-video-el src="assets/video/banwag-360.mp4" controls playsinline preload="metadata" muted style="max-width: 90vw; max-height: 85vh; border-radius: 10px; box-shadow: 0 20px 80px rgba(0,0,0,0.6); background: #000;"></video>
+    <video data-video-el data-src="assets/video/banwag-360.mp4" controls playsinline preload="none" muted style="max-width: 90vw; max-height: 85vh; border-radius: 10px; box-shadow: 0 20px 80px rgba(0,0,0,0.6); background: #000;"></video>
   </div>
 
   <!-- ============ PHOTO SELECTS GALLERY ============ -->
@@ -423,7 +424,7 @@ class Component extends DCLogic {
     const openLb = (src, alt) => { if (!lb) return; lbImg.src = src; lbImg.alt = alt || ''; lb.style.display = 'flex'; document.body.style.overflow = 'hidden'; };
     const closeLb = () => { if (!lb) return; lb.style.display = 'none'; document.body.style.overflow = ''; };
     qa('[data-lightbox]').forEach(img => {
-      img.addEventListener('click', () => openLb(img.src, img.alt));
+      img.addEventListener('click', () => openLb(img.dataset.full || img.src, img.alt));
     });
     if (lb) {
       lb.addEventListener('click', (e) => { if (e.target === lb || e.target.hasAttribute('data-lb-close')) closeLb(); });
@@ -455,6 +456,8 @@ class Component extends DCLogic {
       videoModal.style.display = 'flex';
       document.body.style.overflow = 'hidden';
       if (videoEl) {
+        // the 31 MB file is only requested now, on user action
+        if (!videoEl.getAttribute('src')) videoEl.src = videoEl.dataset.src;
         videoEl.currentTime = 0;
         videoEl.play().then(() => { videoEl.muted = false; }).catch(() => {});
       }
@@ -470,7 +473,8 @@ class Component extends DCLogic {
     }
 
     // photo selects — mini gallery cycling Banwag_1..7.jpg
-    const photos = Array.from({ length: 7 }, (_, i) => `assets/photos/Banwag_${i + 1}.jpg`);
+    // largest WebP variant of Banwag_1..7 (generated by scripts/optimize_images.py)
+    const photos = ["assets/photos/Banwag_1.1600w.webp", "assets/photos/Banwag_2.960w.webp", "assets/photos/Banwag_3.1600w.webp", "assets/photos/Banwag_4.1600w.webp", "assets/photos/Banwag_5.1600w.webp", "assets/photos/Banwag_6.1600w.webp", "assets/photos/Banwag_7.1600w.webp"];
     let photoIdx = 0;
     const gal = q('[data-gallery]');
     const galImg = q('[data-gallery-img]');
