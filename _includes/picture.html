@@ -1,0 +1,24 @@
+{%- comment -%}
+  Responsive <picture> for an image under assets/. Uses _data/images.json (written by
+  scripts/optimize_images.py). Falls back to a plain <img> when the image has no variants yet
+  (e.g. a fresh Decap CMS upload) so nothing ever breaks.
+
+  Params: src (required), alt, sizes (default 100vw), style, class,
+          loading = lazy (default) | eager (above the fold) | hero (LCP: eager + fetchpriority=high)
+  NOTE: the intrinsic width/height attributes are always emitted (they reserve layout space), so
+  in `style` set width AND height explicitly, or use width:auto / height:auto, otherwise the
+  attribute values leak into the layout. Pages also need `picture{display:contents}source{display:none}` in their CSS
+  so the <picture> wrapper does not add a box.
+{%- endcomment -%}
+{%- assign key = include.src | remove_first: '/' -%}
+{%- assign meta = site.data.images[key] -%}
+{%- case include.loading -%}
+  {%- when 'eager' -%}{%- assign load_attrs = 'decoding="async"' -%}
+  {%- when 'hero' -%}{%- assign load_attrs = 'fetchpriority="high" decoding="async"' -%}
+  {%- else -%}{%- assign load_attrs = 'loading="lazy" decoding="async"' -%}
+{%- endcase -%}
+{%- if meta -%}
+<picture><source type="image/webp" srcset="{% for v in meta.variants %}{{ v.src | relative_url }} {{ v.w }}w{% unless forloop.last %}, {% endunless %}{% endfor %}" sizes="{{ include.sizes | default: '100vw' }}"><img src="{{ include.src | relative_url }}" width="{{ meta.w }}" height="{{ meta.h }}" alt="{{ include.alt | escape }}" {{ load_attrs }}{% if include.class %} class="{{ include.class }}"{% endif %}{% if include.style %} style="{{ include.style }}"{% endif %}></picture>
+{%- else -%}
+<img src="{{ include.src | relative_url }}" alt="{{ include.alt | escape }}" {{ load_attrs }}{% if include.class %} class="{{ include.class }}"{% endif %}{% if include.style %} style="{{ include.style }}"{% endif %}>
+{%- endif -%}

@@ -37,6 +37,7 @@ defaults:
 
 exclude:
   - docs/
+  - scripts/
   - graphify-out/
   - README.md
   - Gemfile

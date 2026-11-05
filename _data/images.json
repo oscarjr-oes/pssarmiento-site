@@ -1,0 +1,1573 @@
+{
+ "assets/drawings/01-sheet.png": {
+  "h": 540,
+  "sha1": "f39eb8911f87",
+  "variants": [
+   {
+    "src": "assets/drawings/01-sheet.924w.webp",
+    "w": 924
+   }
+  ],
+  "w": 924
+ },
+ "assets/drawings/02-sheet.png": {
+  "h": 540,
+  "sha1": "f77adb004a77",
+  "variants": [
+   {
+    "src": "assets/drawings/02-sheet.924w.webp",
+    "w": 924
+   }
+  ],
+  "w": 924
+ },
+ "assets/drawings/03-sheet.png": {
+  "h": 540,
+  "sha1": "2e0d5b34a030",
+  "variants": [
+   {
+    "src": "assets/drawings/03-sheet.924w.webp",
+    "w": 924
+   }
+  ],
+  "w": 924
+ },
+ "assets/logos/flp.png": {
+  "h": 2533,
+  "sha1": "6efbe62a291d",
+  "variants": [
+   {
+    "src": "assets/logos/flp.128w.webp",
+    "w": 128
+   },
+   {
+    "src": "assets/logos/flp.256w.webp",
+    "w": 256
+   },
+   {
+    "src": "assets/logos/flp.512w.webp",
+    "w": 512
+   }
+  ],
+  "w": 2480
+ },
+ "assets/logos/fsphi.png": {
+  "h": 3508,
+  "sha1": "ae51aad2ddc6",
+  "variants": [
+   {
+    "src": "assets/logos/fsphi.128w.webp",
+    "w": 128
+   },
+   {
+    "src": "assets/logos/fsphi.256w.webp",
+    "w": 256
+   },
+   {
+    "src": "assets/logos/fsphi.512w.webp",
+    "w": 512
+   }
+  ],
+  "w": 2480
+ },
+ "assets/logos/primosa.png": {
+  "h": 3508,
+  "sha1": "626379792839",
+  "variants": [
+   {
+    "src": "assets/logos/primosa.128w.webp",
+    "w": 128
+   },
+   {
+    "src": "assets/logos/primosa.256w.webp",
+    "w": 256
+   },
+   {
+    "src": "assets/logos/primosa.512w.webp",
+    "w": 512
+   }
+  ],
+  "w": 2480
+ },
+ "assets/logos/ps-group.png": {
+  "h": 2914,
+  "sha1": "abd43c7647eb",
+  "variants": [
+   {
+    "src": "assets/logos/ps-group.128w.webp",
+    "w": 128
+   },
+   {
+    "src": "assets/logos/ps-group.256w.webp",
+    "w": 256
+   },
+   {
+    "src": "assets/logos/ps-group.512w.webp",
+    "w": 512
+   }
+  ],
+  "w": 3300
+ },
+ "assets/logos/pssi.png": {
+  "h": 2260,
+  "sha1": "da1e59922e23",
+  "variants": [
+   {
+    "src": "assets/logos/pssi.128w.webp",
+    "w": 128
+   },
+   {
+    "src": "assets/logos/pssi.256w.webp",
+    "w": 256
+   },
+   {
+    "src": "assets/logos/pssi.512w.webp",
+    "w": 512
+   }
+  ],
+  "w": 2480
+ },
+ "assets/news/garage-sale-for-a-cause-gallery/photo-1.jpg": {
+  "h": 2048,
+  "sha1": "07438bc83a38",
+  "variants": [
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-1.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-1.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-1.1536w.webp",
+    "w": 1536
+   }
+  ],
+  "w": 1536
+ },
+ "assets/news/garage-sale-for-a-cause-gallery/photo-2.jpg": {
+  "h": 2000,
+  "sha1": "0e90a939e1b9",
+  "variants": [
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-2.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-2.900w.webp",
+    "w": 900
+   }
+  ],
+  "w": 900
+ },
+ "assets/news/garage-sale-for-a-cause-gallery/photo-3.jpg": {
+  "h": 1536,
+  "sha1": "bf5c1e723ee1",
+  "variants": [
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-3.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-3.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-3.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 2048
+ },
+ "assets/news/garage-sale-for-a-cause-gallery/photo-4.jpg": {
+  "h": 2048,
+  "sha1": "8bc9d2c35acc",
+  "variants": [
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-4.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-4.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-4.1536w.webp",
+    "w": 1536
+   }
+  ],
+  "w": 1536
+ },
+ "assets/news/garage-sale-for-a-cause-gallery/photo-5.jpg": {
+  "h": 1536,
+  "sha1": "da30f68fce09",
+  "variants": [
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-5.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-5.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-5.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 2048
+ },
+ "assets/news/garage-sale-for-a-cause-gallery/photo-6.jpg": {
+  "h": 1536,
+  "sha1": "3b7c25878c73",
+  "variants": [
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-6.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-6.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-6.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 2048
+ },
+ "assets/news/garage-sale-for-a-cause-gallery/photo-7.jpg": {
+  "h": 1536,
+  "sha1": "dbd3b4dc6444",
+  "variants": [
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-7.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-7.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-7.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 2048
+ },
+ "assets/news/garage-sale-for-a-cause-gallery/photo-8.jpg": {
+  "h": 1536,
+  "sha1": "cf601575f050",
+  "variants": [
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-8.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-8.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/garage-sale-for-a-cause-gallery/photo-8.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 2048
+ },
+ "assets/news/garage-sale-for-a-cause.jpg": {
+  "h": 1600,
+  "sha1": "74e217319b72",
+  "variants": [
+   {
+    "src": "assets/news/garage-sale-for-a-cause.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/garage-sale-for-a-cause.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/garage-sale-for-a-cause.1131w.webp",
+    "w": 1131
+   }
+  ],
+  "w": 1131
+ },
+ "assets/news/grand-opening-and-blessing-new-fsphi-office/cover.jpg": {
+  "h": 1050,
+  "sha1": "695dda3fa47a",
+  "variants": [
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/cover.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/cover.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/cover.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-1.jpg": {
+  "h": 1050,
+  "sha1": "430594111171",
+  "variants": [
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-1.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-1.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-1.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-3.jpg": {
+  "h": 1400,
+  "sha1": "4ec27a95863e",
+  "variants": [
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-3.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-3.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-3.1050w.webp",
+    "w": 1050
+   }
+  ],
+  "w": 1050
+ },
+ "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-4.jpg": {
+  "h": 1050,
+  "sha1": "592f559430c3",
+  "variants": [
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-4.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-4.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-4.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-5.jpg": {
+  "h": 1400,
+  "sha1": "83b21f58708d",
+  "variants": [
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-5.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-5.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-5.1050w.webp",
+    "w": 1050
+   }
+  ],
+  "w": 1050
+ },
+ "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-6.jpg": {
+  "h": 1400,
+  "sha1": "237d815a16d2",
+  "variants": [
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-6.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-6.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-6.1050w.webp",
+    "w": 1050
+   }
+  ],
+  "w": 1050
+ },
+ "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-7.jpg": {
+  "h": 1050,
+  "sha1": "6a4eac08bb5b",
+  "variants": [
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-7.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-7.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-7.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-8.jpg": {
+  "h": 1050,
+  "sha1": "d58f9a030102",
+  "variants": [
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-8.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-8.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-8.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-9.jpg": {
+  "h": 1050,
+  "sha1": "1f52090d07b6",
+  "variants": [
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-9.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-9.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/grand-opening-and-blessing-new-fsphi-office/photo-9.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/introducing-primosa-foundation.png": {
+  "h": 1686,
+  "sha1": "e5bd74bf4e26",
+  "variants": [
+   {
+    "src": "assets/news/introducing-primosa-foundation.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/introducing-primosa-foundation.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/introducing-primosa-foundation.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 1686
+ },
+ "assets/news/mou-signing-flp-and-mhsd-gallery/infographic.jpg": {
+  "h": 2338,
+  "sha1": "032d77333f00",
+  "variants": [
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/infographic.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/infographic.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/infographic.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 1654
+ },
+ "assets/news/mou-signing-flp-and-mhsd-gallery/photo-1.jpg": {
+  "h": 1050,
+  "sha1": "040ef2b313de",
+  "variants": [
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-1.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-1.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-1.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/mou-signing-flp-and-mhsd-gallery/photo-10.jpg": {
+  "h": 1050,
+  "sha1": "c6c287524bb6",
+  "variants": [
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-10.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-10.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-10.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/mou-signing-flp-and-mhsd-gallery/photo-11.jpg": {
+  "h": 1050,
+  "sha1": "30213888a1a6",
+  "variants": [
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-11.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-11.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-11.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/mou-signing-flp-and-mhsd-gallery/photo-12.jpg": {
+  "h": 1400,
+  "sha1": "3ee520bdf4bd",
+  "variants": [
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-12.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-12.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-12.1050w.webp",
+    "w": 1050
+   }
+  ],
+  "w": 1050
+ },
+ "assets/news/mou-signing-flp-and-mhsd-gallery/photo-13.jpg": {
+  "h": 1050,
+  "sha1": "480851cd56c7",
+  "variants": [
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-13.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-13.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-13.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/mou-signing-flp-and-mhsd-gallery/photo-14.jpg": {
+  "h": 1050,
+  "sha1": "8572d9b7af9c",
+  "variants": [
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-14.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-14.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-14.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/mou-signing-flp-and-mhsd-gallery/photo-15.jpg": {
+  "h": 1050,
+  "sha1": "0a705d5c61a7",
+  "variants": [
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-15.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-15.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-15.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/mou-signing-flp-and-mhsd-gallery/photo-2.jpg": {
+  "h": 1050,
+  "sha1": "91d5893af0d9",
+  "variants": [
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-2.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-2.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-2.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/mou-signing-flp-and-mhsd-gallery/photo-3.jpg": {
+  "h": 1400,
+  "sha1": "25c1491bf3a5",
+  "variants": [
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-3.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-3.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-3.1050w.webp",
+    "w": 1050
+   }
+  ],
+  "w": 1050
+ },
+ "assets/news/mou-signing-flp-and-mhsd-gallery/photo-4.jpg": {
+  "h": 1050,
+  "sha1": "82739eecfb44",
+  "variants": [
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-4.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-4.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-4.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/mou-signing-flp-and-mhsd-gallery/photo-5.jpg": {
+  "h": 1400,
+  "sha1": "41acde4e55d8",
+  "variants": [
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-5.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-5.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-5.1050w.webp",
+    "w": 1050
+   }
+  ],
+  "w": 1050
+ },
+ "assets/news/mou-signing-flp-and-mhsd-gallery/photo-6.jpg": {
+  "h": 1050,
+  "sha1": "0fb9b885ac64",
+  "variants": [
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-6.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-6.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-6.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/mou-signing-flp-and-mhsd-gallery/photo-7.jpg": {
+  "h": 1050,
+  "sha1": "bf5ffb165928",
+  "variants": [
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-7.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-7.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-7.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/mou-signing-flp-and-mhsd-gallery/photo-8.jpg": {
+  "h": 1050,
+  "sha1": "877ee4a0ca1c",
+  "variants": [
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-8.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-8.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-8.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/mou-signing-flp-and-mhsd-gallery/photo-9.jpg": {
+  "h": 1050,
+  "sha1": "5389bb18aca8",
+  "variants": [
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-9.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-9.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd-gallery/photo-9.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/mou-signing-flp-and-mhsd.jpg": {
+  "h": 1200,
+  "sha1": "de03b51b30e3",
+  "variants": [
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/mou-signing-flp-and-mhsd.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 1600
+ },
+ "assets/news/new-bamboo-treatment-facility-maguindanao-gallery/photo-1.jpg": {
+  "h": 512,
+  "sha1": "6946406f79d1",
+  "variants": [
+   {
+    "src": "assets/news/new-bamboo-treatment-facility-maguindanao-gallery/photo-1.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/new-bamboo-treatment-facility-maguindanao-gallery/photo-1.768w.webp",
+    "w": 768
+   }
+  ],
+  "w": 768
+ },
+ "assets/news/new-bamboo-treatment-facility-maguindanao-gallery/photo-2.jpg": {
+  "h": 512,
+  "sha1": "1668e8305b9c",
+  "variants": [
+   {
+    "src": "assets/news/new-bamboo-treatment-facility-maguindanao-gallery/photo-2.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/new-bamboo-treatment-facility-maguindanao-gallery/photo-2.768w.webp",
+    "w": 768
+   }
+  ],
+  "w": 768
+ },
+ "assets/news/new-bamboo-treatment-facility-maguindanao.jpg": {
+  "h": 512,
+  "sha1": "98ed687e1f12",
+  "variants": [
+   {
+    "src": "assets/news/new-bamboo-treatment-facility-maguindanao.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/new-bamboo-treatment-facility-maguindanao.768w.webp",
+    "w": 768
+   }
+  ],
+  "w": 768
+ },
+ "assets/news/new-hq-soon-to-rise-gallery/photo-1.jpg": {
+  "h": 1052,
+  "sha1": "dbee5ed837a1",
+  "variants": [
+   {
+    "src": "assets/news/new-hq-soon-to-rise-gallery/photo-1.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/new-hq-soon-to-rise-gallery/photo-1.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/new-hq-soon-to-rise-gallery/photo-1.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/new-hq-soon-to-rise-gallery/photo-2.jpg": {
+  "h": 1055,
+  "sha1": "e010dccd1dad",
+  "variants": [
+   {
+    "src": "assets/news/new-hq-soon-to-rise-gallery/photo-2.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/new-hq-soon-to-rise-gallery/photo-2.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/new-hq-soon-to-rise-gallery/photo-2.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/new-hq-soon-to-rise-gallery/photo-3.jpg": {
+  "h": 1052,
+  "sha1": "cea21ffa9389",
+  "variants": [
+   {
+    "src": "assets/news/new-hq-soon-to-rise-gallery/photo-3.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/new-hq-soon-to-rise-gallery/photo-3.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/new-hq-soon-to-rise-gallery/photo-3.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/new-hq-soon-to-rise.jpg": {
+  "h": 878,
+  "sha1": "7219b3e64f99",
+  "variants": [
+   {
+    "src": "assets/news/new-hq-soon-to-rise.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/new-hq-soon-to-rise.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/new-hq-soon-to-rise.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/one-pablo-option-2.jpg": {
+  "h": 1033,
+  "sha1": "93d631136800",
+  "variants": [
+   {
+    "src": "assets/news/one-pablo-option-2.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/one-pablo-option-2.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/one-pablo-option-2.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/other-mindanao-updates.jpg": {
+  "h": 1293,
+  "sha1": "c8f07858106c",
+  "variants": [
+   {
+    "src": "assets/news/other-mindanao-updates.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/other-mindanao-updates.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/other-mindanao-updates.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/ps-group-meeting-cotabato-state-university-gallery/photo-1.jpg": {
+  "h": 1050,
+  "sha1": "da86d00b3a44",
+  "variants": [
+   {
+    "src": "assets/news/ps-group-meeting-cotabato-state-university-gallery/photo-1.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/ps-group-meeting-cotabato-state-university-gallery/photo-1.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/ps-group-meeting-cotabato-state-university-gallery/photo-1.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/ps-group-meeting-cotabato-state-university-gallery/photo-2.jpg": {
+  "h": 1400,
+  "sha1": "4e986828a862",
+  "variants": [
+   {
+    "src": "assets/news/ps-group-meeting-cotabato-state-university-gallery/photo-2.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/ps-group-meeting-cotabato-state-university-gallery/photo-2.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/ps-group-meeting-cotabato-state-university-gallery/photo-2.1050w.webp",
+    "w": 1050
+   }
+  ],
+  "w": 1050
+ },
+ "assets/news/ps-group-meeting-cotabato-state-university-gallery/photo-3.jpg": {
+  "h": 1050,
+  "sha1": "2727d5cd772d",
+  "variants": [
+   {
+    "src": "assets/news/ps-group-meeting-cotabato-state-university-gallery/photo-3.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/ps-group-meeting-cotabato-state-university-gallery/photo-3.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/ps-group-meeting-cotabato-state-university-gallery/photo-3.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/ps-group-meeting-cotabato-state-university.jpg": {
+  "h": 1920,
+  "sha1": "38a3c7347427",
+  "variants": [
+   {
+    "src": "assets/news/ps-group-meeting-cotabato-state-university.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/ps-group-meeting-cotabato-state-university.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/ps-group-meeting-cotabato-state-university.1080w.webp",
+    "w": 1080
+   }
+  ],
+  "w": 1080
+ },
+ "assets/news/university-square-gallery/photo-1.jpg": {
+  "h": 853,
+  "sha1": "aed2985fc2de",
+  "variants": [
+   {
+    "src": "assets/news/university-square-gallery/photo-1.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/university-square-gallery/photo-1.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/university-square-gallery/photo-1.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/university-square-gallery/photo-2.jpg": {
+  "h": 961,
+  "sha1": "bc33c73e5238",
+  "variants": [
+   {
+    "src": "assets/news/university-square-gallery/photo-2.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/university-square-gallery/photo-2.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/university-square-gallery/photo-2.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/news/university-square-gallery/photo-3.jpg": {
+  "h": 1400,
+  "sha1": "e2f7cfdf9b9b",
+  "variants": [
+   {
+    "src": "assets/news/university-square-gallery/photo-3.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/university-square-gallery/photo-3.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/university-square-gallery/photo-3.987w.webp",
+    "w": 987
+   }
+  ],
+  "w": 987
+ },
+ "assets/news/university-square.jpg": {
+  "h": 765,
+  "sha1": "e70d0f8de44b",
+  "variants": [
+   {
+    "src": "assets/news/university-square.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/university-square.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/news/university-square.1400w.webp",
+    "w": 1400
+   }
+  ],
+  "w": 1400
+ },
+ "assets/photos/3-brothers.jpg": {
+  "h": 622,
+  "sha1": "0d2b9026cbc2",
+  "variants": [
+   {
+    "src": "assets/photos/3-brothers.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/3-brothers.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/3-brothers.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 1920
+ },
+ "assets/photos/Banwag_1.jpg": {
+  "h": 1200,
+  "sha1": "5ca74bf8e278",
+  "variants": [
+   {
+    "src": "assets/photos/Banwag_1.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/Banwag_1.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/Banwag_1.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 1600
+ },
+ "assets/photos/Banwag_2.jpg": {
+  "h": 1280,
+  "sha1": "bb5b6a5c0e14",
+  "variants": [
+   {
+    "src": "assets/photos/Banwag_2.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/Banwag_2.960w.webp",
+    "w": 960
+   }
+  ],
+  "w": 960
+ },
+ "assets/photos/Banwag_3.jpg": {
+  "h": 1350,
+  "sha1": "feb399276075",
+  "variants": [
+   {
+    "src": "assets/photos/Banwag_3.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/Banwag_3.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/Banwag_3.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 1800
+ },
+ "assets/photos/Banwag_4.jpg": {
+  "h": 1350,
+  "sha1": "f385ac96e4d0",
+  "variants": [
+   {
+    "src": "assets/photos/Banwag_4.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/Banwag_4.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/Banwag_4.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 1800
+ },
+ "assets/photos/Banwag_5.jpg": {
+  "h": 1350,
+  "sha1": "d5b0048084a1",
+  "variants": [
+   {
+    "src": "assets/photos/Banwag_5.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/Banwag_5.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/Banwag_5.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 1800
+ },
+ "assets/photos/Banwag_6.jpg": {
+  "h": 1350,
+  "sha1": "c90e712915be",
+  "variants": [
+   {
+    "src": "assets/photos/Banwag_6.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/Banwag_6.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/Banwag_6.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 1800
+ },
+ "assets/photos/Banwag_7.jpg": {
+  "h": 1350,
+  "sha1": "0faffd0c7354",
+  "variants": [
+   {
+    "src": "assets/photos/Banwag_7.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/Banwag_7.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/Banwag_7.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 1800
+ },
+ "assets/photos/banwag-sign.jpg": {
+  "h": 3000,
+  "sha1": "7c4be8400b23",
+  "variants": [
+   {
+    "src": "assets/photos/banwag-sign.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/banwag-sign.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/banwag-sign.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 4000
+ },
+ "assets/photos/ceiling-radial.jpg": {
+  "h": 3000,
+  "sha1": "550b900516a7",
+  "variants": [
+   {
+    "src": "assets/photos/ceiling-radial.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/ceiling-radial.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/ceiling-radial.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 4000
+ },
+ "assets/photos/dome-blue.jpg": {
+  "h": 1350,
+  "sha1": "bc2b12a88c9c",
+  "variants": [
+   {
+    "src": "assets/photos/dome-blue.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/dome-blue.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/dome-blue.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 1800
+ },
+ "assets/photos/dome-cloud.jpg": {
+  "h": 1350,
+  "sha1": "a626962eebf4",
+  "variants": [
+   {
+    "src": "assets/photos/dome-cloud.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/dome-cloud.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/dome-cloud.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 1800
+ },
+ "assets/photos/dusk-beacon.jpg": {
+  "h": 3000,
+  "sha1": "14030328e77a",
+  "variants": [
+   {
+    "src": "assets/photos/dusk-beacon.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/dusk-beacon.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/dusk-beacon.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 4000
+ },
+ "assets/photos/exterior-day.jpg": {
+  "h": 3000,
+  "sha1": "f2af0efd158a",
+  "variants": [
+   {
+    "src": "assets/photos/exterior-day.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/exterior-day.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/exterior-day.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 4000
+ },
+ "assets/photos/hero-golden.jpg": {
+  "h": 3000,
+  "sha1": "21b89b594bf2",
+  "variants": [
+   {
+    "src": "assets/photos/hero-golden.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/hero-golden.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/hero-golden.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 4000
+ },
+ "assets/photos/interior-glow.jpg": {
+  "h": 1350,
+  "sha1": "fd97f58cda65",
+  "variants": [
+   {
+    "src": "assets/photos/interior-glow.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/interior-glow.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/interior-glow.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 1800
+ },
+ "assets/photos/interior-lattice.jpg": {
+  "h": 3000,
+  "sha1": "719ab60cdafb",
+  "variants": [
+   {
+    "src": "assets/photos/interior-lattice.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/interior-lattice.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/interior-lattice.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 4000
+ },
+ "assets/photos/landas-masterplan.jpg": {
+  "h": 8000,
+  "sha1": "1ebb8d6f8ddc",
+  "variants": [
+   {
+    "src": "assets/photos/landas-masterplan.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/landas-masterplan.1600w.webp",
+    "w": 1600
+   },
+   {
+    "src": "assets/photos/landas-masterplan.2400w.webp",
+    "w": 2400
+   }
+  ],
+  "w": 12000
+ },
+ "assets/photos/night-led.jpg": {
+  "h": 1080,
+  "sha1": "ff687ee7ffaa",
+  "variants": [
+   {
+    "src": "assets/photos/night-led.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/night-led.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/night-led.1440w.webp",
+    "w": 1440
+   }
+  ],
+  "w": 1440
+ },
+ "assets/photos/node-detail.jpg": {
+  "h": 3000,
+  "sha1": "0fe8f7618560",
+  "variants": [
+   {
+    "src": "assets/photos/node-detail.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/node-detail.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/node-detail.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 4000
+ },
+ "assets/photos/papang-and-nanay.webp": {
+  "h": 1168,
+  "sha1": "18f28f8d091b",
+  "variants": [
+   {
+    "src": "assets/photos/papang-and-nanay.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/papang-and-nanay.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/papang-and-nanay.1108w.webp",
+    "w": 1108
+   }
+  ],
+  "w": 1108
+ },
+ "assets/photos/sign-sunset.jpg": {
+  "h": 1350,
+  "sha1": "6a238683b223",
+  "variants": [
+   {
+    "src": "assets/photos/sign-sunset.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/sign-sunset.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/sign-sunset.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 1800
+ },
+ "assets/photos/sunburst.jpg": {
+  "h": 3000,
+  "sha1": "43be14008cc6",
+  "variants": [
+   {
+    "src": "assets/photos/sunburst.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/sunburst.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/sunburst.1600w.webp",
+    "w": 1600
+   }
+  ],
+  "w": 4000
+ },
+ "assets/photos/watercolor.png": {
+  "h": 768,
+  "sha1": "dfa739507af6",
+  "variants": [
+   {
+    "src": "assets/photos/watercolor.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/photos/watercolor.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/photos/watercolor.1376w.webp",
+    "w": 1376
+   }
+  ],
+  "w": 1376
+ }
+}
