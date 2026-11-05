@@ -4,11 +4,12 @@ date: 2026-02-12
 category: "News & Events"
 author: admin
 cover: /assets/news/ps-group-meeting-cotabato-state-university.jpg
+image: /assets/news/ps-group-meeting-cotabato-state-university.jpg
 gallery:
   - /assets/news/ps-group-meeting-cotabato-state-university-gallery/photo-1.jpg
   - /assets/news/ps-group-meeting-cotabato-state-university-gallery/photo-2.jpg
   - /assets/news/ps-group-meeting-cotabato-state-university-gallery/photo-3.jpg
-summary: "PS Group and Cotabato State University advance the UP SALT Tilapia initiative and the new Demo Farm Fishpond Fisheries Research Center."
+description: "PS Group and Cotabato State University advance the UP SALT Tilapia initiative and the new Demo Farm Fishpond Fisheries Research Center."
 ---
 January 10, 2026
 

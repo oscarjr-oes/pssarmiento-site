@@ -5,11 +5,12 @@ category: "Newsletter"
 tags: [Oscar Sarmiento Jr, Mindanao, News & Events]
 author: Tin Terrible-Sarmiento
 cover: /assets/news/new-hq-soon-to-rise.jpg
+image: /assets/news/new-hq-soon-to-rise.jpg
 gallery:
   - /assets/news/new-hq-soon-to-rise-gallery/photo-1.jpg
   - /assets/news/new-hq-soon-to-rise-gallery/photo-2.jpg
   - /assets/news/new-hq-soon-to-rise-gallery/photo-3.jpg
-summary: "Groundbreaking and foundation work commence for the Bamboo Treatment Plant, Office Building, Bodega, and Dorm, targeting 3Q23 completion."
+description: "Groundbreaking and foundation work commence for the Bamboo Treatment Plant, Office Building, Bodega, and Dorm, targeting 3Q23 completion."
 ---
 Groundbreaking, site development and foundation work activities for the Bamboo Treatment Plant, Office Building, Bodega, and Dorm all commenced in February. Target completion is in 3Q23.
 

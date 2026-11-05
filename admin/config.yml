@@ -30,6 +30,7 @@ collections:
         default: "News & Events"
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Cover Image", name: "cover", widget: "image", required: false }
-      - { label: "Summary", name: "summary", widget: "text", required: false, hint: "Short teaser shown in link previews and search results." }
+      - { label: "Description", name: "description", widget: "text", required: true, hint: "1-2 sentences (max ~160 characters). Used as the search-result snippet and the Facebook/Viber link-preview text. See docs/NEWS-POSTING.md." }
+      - { label: "Share Image", name: "image", widget: "image", required: false, hint: "Link-preview image. Ideal: 1200x630 JPG. Leave blank to use the PS Group default. Usually the same as Cover Image." }
       - { label: "Author", name: "author", widget: "string", default: "admin", required: false }
       - { label: "Body", name: "body", widget: "markdown" }

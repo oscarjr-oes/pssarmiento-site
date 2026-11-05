@@ -4,6 +4,7 @@ date: 2026-02-09
 category: "News & Events"
 author: admin
 cover: /assets/news/mou-signing-flp-and-mhsd.jpg
+image: /assets/news/mou-signing-flp-and-mhsd.jpg
 gallery:
   - /assets/news/mou-signing-flp-and-mhsd-gallery/infographic.jpg
   - /assets/news/mou-signing-flp-and-mhsd-gallery/photo-1.jpg
@@ -21,7 +22,7 @@ gallery:
   - /assets/news/mou-signing-flp-and-mhsd-gallery/photo-13.jpg
   - /assets/news/mou-signing-flp-and-mhsd-gallery/photo-14.jpg
   - /assets/news/mou-signing-flp-and-mhsd-gallery/photo-15.jpg
-summary: "PS Group and the Ministry of Human Settlements and Development sign an MOU for a development project in Parang, Maguindanao, centered on the BANWAG structure."
+description: "PS Group and the Ministry of Human Settlements and Development sign an MOU for a development project in Parang, Maguindanao, centered on the BANWAG structure."
 ---
 January 10, 2026
 

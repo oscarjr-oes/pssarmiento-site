@@ -1,5 +1,7 @@
-title: PS Group of Companies — News
-description: News and updates from PS Group of Companies
+title: PS Group of Companies
+description: Family-run Philippine conglomerate in property, construction, agriculture, and community building since 1948.
+lang: en_PH
+logo: /assets/logos/ps-group.png
 url: "https://pssarmiento.com"
 baseurl: ""
 
@@ -11,12 +13,27 @@ collections:
     output: true
     permalink: /news/:slug/
 
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
 defaults:
   - scope:
       path: ""
       type: posts
     values:
       layout: post
+      # Fallback share image (OpenGraph/Twitter). Override per post with `image:`.
+      image: /assets/og/default.jpg
+  # Keep non-content pages out of sitemap.xml
+  - scope: { path: "portal.html" }
+    values: { sitemap: false }
+  - scope: { path: "news.html" }
+    values: { sitemap: false }
+  - scope: { path: "post" }
+    values: { sitemap: false }
+  - scope: { path: "admin" }
+    values: { sitemap: false }
 
 exclude:
   - docs/

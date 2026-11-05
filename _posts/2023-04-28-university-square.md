@@ -5,11 +5,12 @@ category: "Newsletter"
 tags: [Luzon, Natasha Dumlao]
 author: Tin Terrible-Sarmiento
 cover: /assets/news/university-square.jpg
+image: /assets/news/university-square.jpg
 gallery:
   - /assets/news/university-square-gallery/photo-1.jpg
   - /assets/news/university-square-gallery/photo-2.jpg
   - /assets/news/university-square-gallery/photo-3.jpg
-summary: "University Square records its first lot sale, with building permits, project presentations, and landscaping underway."
+description: "University Square records its first lot sale, with building permits, project presentations, and landscaping underway."
 ---
 GOOD NEWS! We have our first sale for UNIVERSITY SQUARE. Our Buyer is Engr. Leo Marpuri.
 

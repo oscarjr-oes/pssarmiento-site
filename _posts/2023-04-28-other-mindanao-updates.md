@@ -5,7 +5,8 @@ category: "Newsletter"
 tags: [Oscar Sarmiento Jr]
 author: Tin Terrible-Sarmiento
 cover: /assets/news/other-mindanao-updates.jpg
-summary: "Fencing, LiDAR surveys, security engagement with claimant/settler groups, and masterplanning updates from the Mindanao properties."
+image: /assets/news/other-mindanao-updates.jpg
+description: "Fencing, LiDAR surveys, security engagement with claimant/settler groups, and masterplanning updates from the Mindanao properties."
 ---
 By: Oscar Sarmiento, Jr.
 
