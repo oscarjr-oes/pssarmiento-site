@@ -229,26 +229,9 @@ Being in a position to give back, they are excited to create win-win opportuniti
 
 By: Oscar Sarmiento, Jr.
 
-**Fencing**
-
-Blue areas completely fenced. Materials for yellow areas ready for deployment.
-
-**LiDAR Surveys**
-
-These have been conducted on Balai Isabel, LLS properties, Bauan property, Cito Lorenzo property
-
-**Security Concerns**
-
-Touched base and sat down with various claimant/settler groups:
-- ALI Group
-- Muslim Sarmiento
-- Commander Toks
-
-In court hearing for Nuling VOS on Feb. 21, requested additional docs. Tentative court schedule on May 2, 2023.
-
-Masterplanning for Central Parang area in process.
-
-Coast Guard commenced building wooden structure on usufruct site.
+> **[REDACTED — 8 November 2026]** This item was withdrawn from publication. Its body and cover
+> image have been removed from this repository and from the site. The reasons are recorded
+> internally. Do not restore this item here.
 
 ---
 
@@ -268,9 +251,10 @@ Face-to-face meetings were also conducted with Base Builds, Kawayan Collective a
 ## 9. University Square
 **Author:** Tin Terrible-Sarmiento · **Category:** 2023 Apr | PS Group Newsletter · **Tags:** Luzon, Natasha Dumlao · **Published:** Apr 28, 2023
 
-GOOD NEWS! We have our first sale for UNIVERSITY SQUARE. Our Buyer is Engr. Leo Marpuri.
+GOOD NEWS! We have our first sale for UNIVERSITY SQUARE.
 
-He reserved Lot 2 of our project!
+Our first buyer has reserved a lot in the project. <!-- redacted 8 Nov 2026 -->
+
 
 We are now fixing our building permits for the project, so we can start construction soon.
 
