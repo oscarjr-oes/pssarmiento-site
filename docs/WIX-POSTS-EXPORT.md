@@ -173,9 +173,10 @@ The event concluded with the official signing of the MOU and a photo opportunity
 ## 5. New Bamboo Treatment Facility in Maguindanao to support Mindanao Sustainable Housing Effort
 **Author:** Tin Terrible-Sarmiento · **Category:** News & Events · **Tags:** press release · **Published:** Jul 11, 2023
 
-> **[REDACTED — 8 November 2026]** This item was withdrawn from publication. Its body and any
-> images have been removed from this repository and from the site. The reasons are recorded
-> internally. Do not restore this item here.
+> **[PARTIALLY REDACTED — 8 November 2026]** This item remains published in trimmed form. Two
+> sentences near the end were removed. The reasons are recorded internally. Do not restore the
+> removed sentences here or on the site. For the published text see
+> `_posts/2023-07-11-new-bamboo-treatment-facility-maguindanao.md`.
 
 ---
 ## 6. Introducing, Primosa Foundation

@@ -807,6 +807,51 @@
   ],
   "w": 1600
  },
+ "assets/news/new-bamboo-treatment-facility-maguindanao-gallery/photo-1.jpg": {
+  "h": 512,
+  "sha1": "6946406f79d1",
+  "variants": [
+   {
+    "src": "assets/news/new-bamboo-treatment-facility-maguindanao-gallery/photo-1.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/new-bamboo-treatment-facility-maguindanao-gallery/photo-1.768w.webp",
+    "w": 768
+   }
+  ],
+  "w": 768
+ },
+ "assets/news/new-bamboo-treatment-facility-maguindanao-gallery/photo-2.jpg": {
+  "h": 512,
+  "sha1": "1668e8305b9c",
+  "variants": [
+   {
+    "src": "assets/news/new-bamboo-treatment-facility-maguindanao-gallery/photo-2.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/new-bamboo-treatment-facility-maguindanao-gallery/photo-2.768w.webp",
+    "w": 768
+   }
+  ],
+  "w": 768
+ },
+ "assets/news/new-bamboo-treatment-facility-maguindanao.jpg": {
+  "h": 512,
+  "sha1": "98ed687e1f12",
+  "variants": [
+   {
+    "src": "assets/news/new-bamboo-treatment-facility-maguindanao.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/news/new-bamboo-treatment-facility-maguindanao.768w.webp",
+    "w": 768
+   }
+  ],
+  "w": 768
+ },
  "assets/news/ps-group-meeting-cotabato-state-university-gallery/photo-1.jpg": {
   "h": 1050,
   "sha1": "da86d00b3a44",
