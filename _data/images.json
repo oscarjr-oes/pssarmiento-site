@@ -1361,25 +1361,6 @@
   ],
   "w": 4000
  },
- "assets/photos/landas-masterplan.jpg": {
-  "h": 8000,
-  "sha1": "1ebb8d6f8ddc",
-  "variants": [
-   {
-    "src": "assets/photos/landas-masterplan.960w.webp",
-    "w": 960
-   },
-   {
-    "src": "assets/photos/landas-masterplan.1600w.webp",
-    "w": 1600
-   },
-   {
-    "src": "assets/photos/landas-masterplan.2400w.webp",
-    "w": 2400
-   }
-  ],
-  "w": 12000
- },
  "assets/photos/night-led.jpg": {
   "h": 1080,
   "sha1": "ff687ee7ffaa",
