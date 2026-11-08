@@ -852,120 +852,6 @@
   ],
   "w": 768
  },
- "assets/news/new-hq-soon-to-rise-gallery/photo-1.jpg": {
-  "h": 1052,
-  "sha1": "dbee5ed837a1",
-  "variants": [
-   {
-    "src": "assets/news/new-hq-soon-to-rise-gallery/photo-1.480w.webp",
-    "w": 480
-   },
-   {
-    "src": "assets/news/new-hq-soon-to-rise-gallery/photo-1.960w.webp",
-    "w": 960
-   },
-   {
-    "src": "assets/news/new-hq-soon-to-rise-gallery/photo-1.1400w.webp",
-    "w": 1400
-   }
-  ],
-  "w": 1400
- },
- "assets/news/new-hq-soon-to-rise-gallery/photo-2.jpg": {
-  "h": 1055,
-  "sha1": "e010dccd1dad",
-  "variants": [
-   {
-    "src": "assets/news/new-hq-soon-to-rise-gallery/photo-2.480w.webp",
-    "w": 480
-   },
-   {
-    "src": "assets/news/new-hq-soon-to-rise-gallery/photo-2.960w.webp",
-    "w": 960
-   },
-   {
-    "src": "assets/news/new-hq-soon-to-rise-gallery/photo-2.1400w.webp",
-    "w": 1400
-   }
-  ],
-  "w": 1400
- },
- "assets/news/new-hq-soon-to-rise-gallery/photo-3.jpg": {
-  "h": 1052,
-  "sha1": "cea21ffa9389",
-  "variants": [
-   {
-    "src": "assets/news/new-hq-soon-to-rise-gallery/photo-3.480w.webp",
-    "w": 480
-   },
-   {
-    "src": "assets/news/new-hq-soon-to-rise-gallery/photo-3.960w.webp",
-    "w": 960
-   },
-   {
-    "src": "assets/news/new-hq-soon-to-rise-gallery/photo-3.1400w.webp",
-    "w": 1400
-   }
-  ],
-  "w": 1400
- },
- "assets/news/new-hq-soon-to-rise.jpg": {
-  "h": 878,
-  "sha1": "7219b3e64f99",
-  "variants": [
-   {
-    "src": "assets/news/new-hq-soon-to-rise.480w.webp",
-    "w": 480
-   },
-   {
-    "src": "assets/news/new-hq-soon-to-rise.960w.webp",
-    "w": 960
-   },
-   {
-    "src": "assets/news/new-hq-soon-to-rise.1400w.webp",
-    "w": 1400
-   }
-  ],
-  "w": 1400
- },
- "assets/news/one-pablo-option-2.jpg": {
-  "h": 1033,
-  "sha1": "93d631136800",
-  "variants": [
-   {
-    "src": "assets/news/one-pablo-option-2.480w.webp",
-    "w": 480
-   },
-   {
-    "src": "assets/news/one-pablo-option-2.960w.webp",
-    "w": 960
-   },
-   {
-    "src": "assets/news/one-pablo-option-2.1400w.webp",
-    "w": 1400
-   }
-  ],
-  "w": 1400
- },
- "assets/news/other-mindanao-updates.jpg": {
-  "h": 1293,
-  "sha1": "c8f07858106c",
-  "variants": [
-   {
-    "src": "assets/news/other-mindanao-updates.480w.webp",
-    "w": 480
-   },
-   {
-    "src": "assets/news/other-mindanao-updates.960w.webp",
-    "w": 960
-   },
-   {
-    "src": "assets/news/other-mindanao-updates.1400w.webp",
-    "w": 1400
-   }
-  ],
-  "w": 1400
- },
  "assets/news/ps-group-meeting-cotabato-state-university-gallery/photo-1.jpg": {
   "h": 1050,
   "sha1": "da86d00b3a44",
@@ -1117,6 +1003,44 @@
    }
   ],
   "w": 1400
+ },
+ "assets/og/banwag.jpg": {
+  "h": 630,
+  "sha1": "03d977e56eb9",
+  "variants": [
+   {
+    "src": "assets/og/banwag.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/og/banwag.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/og/banwag.1200w.webp",
+    "w": 1200
+   }
+  ],
+  "w": 1200
+ },
+ "assets/og/default.jpg": {
+  "h": 630,
+  "sha1": "a7ed874e8e2d",
+  "variants": [
+   {
+    "src": "assets/og/default.480w.webp",
+    "w": 480
+   },
+   {
+    "src": "assets/og/default.960w.webp",
+    "w": 960
+   },
+   {
+    "src": "assets/og/default.1200w.webp",
+    "w": 1200
+   }
+  ],
+  "w": 1200
  },
  "assets/photos/3-brothers.jpg": {
   "h": 622,
@@ -1436,25 +1360,6 @@
    }
   ],
   "w": 4000
- },
- "assets/photos/landas-masterplan.jpg": {
-  "h": 8000,
-  "sha1": "1ebb8d6f8ddc",
-  "variants": [
-   {
-    "src": "assets/photos/landas-masterplan.960w.webp",
-    "w": 960
-   },
-   {
-    "src": "assets/photos/landas-masterplan.1600w.webp",
-    "w": 1600
-   },
-   {
-    "src": "assets/photos/landas-masterplan.2400w.webp",
-    "w": 2400
-   }
-  ],
-  "w": 12000
  },
  "assets/photos/night-led.jpg": {
   "h": 1080,

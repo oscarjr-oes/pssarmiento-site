@@ -12,9 +12,9 @@ gallery:
   - /assets/news/university-square-gallery/photo-3.jpg
 description: "University Square records its first lot sale, with building permits, project presentations, and landscaping underway."
 ---
-GOOD NEWS! We have our first sale for UNIVERSITY SQUARE. Our Buyer is Engr. Leo Marpuri.
+GOOD NEWS! We have our first sale for UNIVERSITY SQUARE.
 
-He reserved Lot 2 of our project!
+Our first buyer has reserved a lot in the project.
 
 We are now fixing our building permits for the project, so we can start construction soon.
 
